@@ -1,0 +1,20 @@
+@import "lib/normalize";
+@import "lib/font-awesome";
+@import "lib/markdown";
+@import "lib/highlight";
+@import "variables";
+@import "mediaQuery";
+
+html,body{
+  height: 100%;
+  font-family: $fontGothic;
+}
+
+button{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+a{
+  text-decoration: none;
+}
