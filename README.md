@@ -1,4 +1,4 @@
-# CMS-OF-BLOG
+# CMS-of-Blog
 
 一个前端基于Vue.js，后端基于Node.js的博客内容管理器
 
@@ -10,7 +10,7 @@
 
 ### 前端：Vue全家桶
 * Vue.js
-* Vue-Cli
+* Vue-cli
 * Vue-Resource
 * Vue-Validator
 * Vue-Router
@@ -49,7 +49,7 @@ git clone https://github.com/ycwalker/CMS-of-Blog.git
 进入项目目录
 
 ```
-cd CMS-of-Blog
+cd cms-of-blog
 ```
 
 安装依赖
