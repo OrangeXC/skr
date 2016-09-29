@@ -16,7 +16,7 @@ const mutations = {
   TOGGLE: (state) => state.waiting = !state.waiting,
   SETUSER: (state, userName) => state.userName = userName,
   POP: (state, para) => state.popPara = para,
-  BGTOGGLE:(state,bg) => state.bg = bg
+  BGTOGGLE:(state, bg) => state.bg = bg
 }
 
 export default new Vuex.Store({

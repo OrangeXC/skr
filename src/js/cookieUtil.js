@@ -1,4 +1,3 @@
-
 function get(name) {
   let cookieName = encodeURIComponent(name) + '=',
       cookieStart = document.cookie.indexOf(cookieName),

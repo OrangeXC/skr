@@ -15,7 +15,7 @@
   export default {
     vuex: {
       getters: {
-          getPopPara,
+        getPopPara,
       }
     },
     methods: {
