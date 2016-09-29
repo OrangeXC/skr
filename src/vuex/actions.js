@@ -1,16 +1,19 @@
 function toggle(store) {
-    store.dispatch('TOGGLE')
-}
-function setUser({dispatch},userName){
-    dispatch('SETUSER',userName)
+  store.dispatch('TOGGLE')
 }
 
-function pop({dispatch},para) {
-    dispatch('POP',para)
+function setUser({dispatch}, userName) {
+  dispatch('SETUSER', userName)
 }
-function bgToggle({dispatch},bg) {
-    dispatch('BGTOGGLE',bg)
+
+function pop({dispatch}, para) {
+  dispatch('POP', para)
 }
+
+function bgToggle({dispatch}, bg) {
+  dispatch('BGTOGGLE', bg)
+}
+
 export {
-    toggle,setUser,pop,bgToggle
+  toggle, setUser, pop, bgToggle
 }
