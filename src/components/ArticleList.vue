@@ -50,10 +50,10 @@
       this.$http.get('/articleList').then((response)=> {
         let arcs = JSON.parse(response.body)
         this.articles = arcs.sort((i, j)=> {
-            return new Date(j.date) - new Date(i.date)
+          return new Date(j.date) - new Date(i.date)
         })
       }, (response)=> {
-          console.log(response)
+        console.log(response)
       })
     },
     methods: {

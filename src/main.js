@@ -72,9 +72,9 @@ let App = Vue.extend({
     root: '/'
   },
   computed: {
-    waiting: () => store.state.waiting,
-    pop:() => store.state.popPara.pop,
-    bg:() => store.state.bg,
+    waiting: ()=> store.state.waiting,
+    pop: ()=> store.state.popPara.pop,
+    bg: ()=> store.state.bg,
   },
   store,
   ready() {

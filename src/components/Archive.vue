@@ -66,12 +66,12 @@
     computed: {
       archive() {
         if (!this.articles) {
-          return {1:[{title:'', date:''}]}
+          return {1: [{title: '', date: ''}]}
         }
 
         let archive = {}
 
-        this.years.splice(0,1)
+        this.years.splice(0, 1)
 
         this.articles.forEach(atc=> {
           let year = new Date(atc.date).getFullYear()
