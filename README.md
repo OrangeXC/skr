@@ -1,6 +1,6 @@
-# CMS-of-Blog
+# Blog
 
-一个前端基于Vue.js，后端基于Node.js的博客内容管理器
+一个前端基于 Vue.js，后端基于 Node.js 的博客内容管理器
 
 ## Features
 
