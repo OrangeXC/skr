@@ -43,13 +43,13 @@
 克隆远程库
 
 ```
-git clone https://github.com/ycwalker/CMS-of-Blog.git
+git clone https://github.com/OrangeXC/blog.git
 ```
 
 进入项目目录
 
 ```
-cd cms-of-blog
+cd blog
 ```
 
 安装依赖
