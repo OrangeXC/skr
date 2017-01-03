@@ -16,7 +16,7 @@ const doToast = (state, commit, payload) => {
   return state.toast.promise
 }
 
-Promise.finally = function (callback) {
+Promise.prototype.finally = function (callback) {
   return this.then(
     value => Promise.resolve(callback()).then(() => value),
     reason => Promise.resolve(callback()).then(() => {
@@ -54,7 +54,7 @@ export default {
   deleteArticle ({state, commit, dispatch}, id) {
     return doToast(state, commit, {info: '确定要删除吗?', btnNum: 2})
       .then(() => Vue.http.post('/api/deleteArticle', {id}))
-      .then(() => commit('TOASTING_TOGGLE', false))
+      .finally(() => commit('TOASTING_TOGGLE', false))
       .then(() => dispatch('getArticles'))
       .catch(() => {
       })
