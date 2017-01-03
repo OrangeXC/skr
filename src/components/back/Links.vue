@@ -12,28 +12,14 @@
       <draggable :list="links" :options="dragOptions">
         <tr v-for="(link,index) in links">
           <td class="link-name">
-            <input type="text"
-                  :value="link.name"
-                  placeholder="链接名称"
-                  spellcheck="false"
-                  @input="UPDATE_LINK_NAME({name: $event.target.value, index})">
+            <input type="text" :value="link.name" placeholder="链接名称" spellcheck="false" @input="UPDATE_LINK_NAME({name: $event.target.value, index})">
           </td>
           <td class="link-url">
-            <input type="text"
-                  :value="link.href"
-                  placeholder="链接地址"
-                  spellcheck="false"
-                  @input="UPDATE_LINK_HREF({href: $event.target.value, index})">
+            <input type="text" :value="link.href" placeholder="链接地址" spellcheck="false" @input="UPDATE_LINK_HREF({href: $event.target.value, index})">
           </td>
           <td class="link-handle">
-            <i class="fa fa-plus-circle" style="cursor: pointer;"
-              @click="ADD_NEW_LINK(index)"
-              v-if="links.length < 4">
-            </i>&nbsp;
-            <i class="fa fa-minus-circle" style="cursor: pointer;"
-              @click="REMOVE_LINK(index)"
-              v-if="links.length > 1">
-            </i>&nbsp;
+            <i class="fa fa-plus-circle" style="cursor: pointer;" @click="ADD_NEW_LINK(index)" v-if="links.length < 4"></i>&nbsp;
+            <i class="fa fa-minus-circle" style="cursor: pointer;" @click="REMOVE_LINK(index)" v-if="links.length > 1"></i>&nbsp;
             <i class="fa fa-sort" style="cursor: pointer;" aria-hidden="true"></i>
           </td>
         </tr>
@@ -49,7 +35,7 @@
   import {mapMutations, mapActions, mapState} from 'vuex'
   import draggable from 'vuedraggable'
 
-  export default{
+  export default {
     data () {
       return {
         dragOptions: {
@@ -57,7 +43,7 @@
         }
       }
     },
-    created(){
+    created () {
       this.getLinks()
     },
     computed: mapState(['links']),

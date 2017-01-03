@@ -6,35 +6,26 @@
       </p>
       <p class="input">
         <i class="fa fa-user fa-fw"></i>
-        <input id="userName"
-               type="text"
-               name="userName"
-               placeholder="用户名"
-               v-model.trim="name"
-        >
+        <input id="userName" type="text" name="userName" placeholder="用户名" v-model.trim="name">
       </p>
       <p class="input">
         <i class="fa fa-key fa-fw"></i>
-        <input id="password"
-               type="password"
-               placeholder="密码"
-               v-model.trim="pwd"
-        >
+        <input id="password" type="password" placeholder="密码" v-model.trim="pwd">
       </p>
       <p class="info">{{info}}</p>
       <p>
-        <button @click="doLogin()">登录
-        </button>
+        <button @click="doLogin()">登录</button>
       </p>
     </div>
   </section>
 </template>
+
 <script>
   import {mapActions} from 'vuex'
-  import {set}  from '../../assets/js/cookieUtil'
+  import {set} from '../../assets/js/cookieUtil'
 
-  export default{
-    data(){
+  export default {
+    data () {
       return {
         name: '',
         pwd: '',
@@ -42,7 +33,7 @@
       }
     },
     methods: {
-      doLogin(){
+      doLogin () {
         if (!this.name.length) return this.info = '请输入正常的用户名'
         if (!this.pwd.length) return this.info = '请输入正常的密码'
 
@@ -54,7 +45,7 @@
           })
           .catch(msg => this.info = msg)
       },
-      clearInfo(){
+      clearInfo () {
         this.info = ''
       },
       ...mapActions(['login'])
@@ -65,6 +56,7 @@
     }
   }
 </script>
+
 <style lang="sass" rel="stylesheet/scss" scoped>
   @import "../../style/variables";
 

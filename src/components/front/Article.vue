@@ -4,32 +4,33 @@
     <section class="article">
       <article class="block">
         <div class="title">{{article.title}}</div>
-        <div class="info">{{article.date |toDate}}</div>
+        <div class="info">{{article.date | toDate}}</div>
         <div class="content" v-html="article.content"></div>
       </article>
     </section>
     <my-footer></my-footer>
   </main>
 </template>
-<script>
-  import {mapState}   from 'vuex'
-  import marked       from '../../assets/js/marked.min'
-  import hljs         from '../../assets/js/highlight.pack'
-  import MyHeader     from './MyHeader.vue'
-  import MyFooter     from './MyFooter.vue'
 
-  export default{
-    created(){
+<script>
+  import {mapState} from 'vuex'
+  import marked from '../../assets/js/marked.min'
+  import hljs from '../../assets/js/highlight.pack'
+  import MyHeader from './MyHeader.vue'
+  import MyFooter from './MyFooter.vue'
+
+  export default {
+    created () {
       this.fetchData()
     },
-    updated(){
+    updated () {
       this.highlight()
     },
     methods: {
-      fetchData(){
+      fetchData () {
         this.$store.dispatch('getArticle', this.$route.query.id)
       },
-      highlight(){
+      highlight () {
         setTimeout(() => {
           hljs.initHighlighting.called = false
           hljs.initHighlighting()

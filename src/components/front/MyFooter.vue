@@ -8,6 +8,7 @@
     </router-link>
   </footer>
 </template>
+
 <style lang="sass" rel="stylesheet/scss" scoped>
   footer {
     position: absolute;

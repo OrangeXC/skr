@@ -6,10 +6,12 @@ section.container {
   header.myHeader {
     padding: 20px 100px;
     margin-bottom: 60px;
+
     div.circle{
       float:left;
     }
   }
+
   .wrap,footer {
     width: 700px;
     margin: 0 auto;
@@ -19,7 +21,8 @@ section.container {
 @media screen and (max-width: 700px) {
   header.myHeader {
     padding: 20px 0;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
+
     div.circle,
     ul.menu {
       margin: 0 auto;
@@ -27,24 +30,27 @@ section.container {
       display: block;
       text-align: center;
       padding: 0;
+
       li {
-        padding: 10px 10px;
+        padding: 10px;
       }
     }
   }
-  .wrap,footer {
+  .wrap, footer {
     width: 100%;
   }
 
   .article .block {
     padding: 0 30px;
   }
+
   .content {
     h2, h3, h4, h5, h6 {
       max-width: 300px;
       left: 15px;
     }
   }
+
   .archive .item{
     padding-left: 20px;
   }

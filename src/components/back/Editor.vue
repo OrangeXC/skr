@@ -1,53 +1,47 @@
 <template>
   <section class="editor">
-    <input class="title"
-           placeholder="标题"
-           v-model="title">
-    <div :class="inspected?'inspect':'edit'">
+    <input class="title" placeholder="标题" v-model="title">
+    <div :class="inspected ? 'inspect' : 'edit'">
       <textarea v-model="content" spellcheck="false"></textarea>
-      <button class="toggle"
-              @click="inspected = !inspected">
-        <i class="fa fa-chevron-left fa-fw"
-           v-show="!inspected"></i>
-        <i class="fa fa-chevron-right fa-fw"
-           v-show="inspected"></i>
+      <button class="toggle" @click="inspected = !inspected">
+        <i class="fa fa-chevron-left fa-fw" v-show="!inspected"></i>
+        <i class="fa fa-chevron-right fa-fw" v-show="inspected"></i>
       </button>
       <article id="a" v-html="markedContent"></article>
     </div>
     <div class="panel">
-      <button class="saveArticle"
-              @click="save">保存
-      </button>
+      <button class="saveArticle" @click="save">保存</button>
     </div>
   </section>
 </template>
+
 <script>
   import {mapActions, mapMutations} from 'vuex'
-  import marked     from '../../assets/js/marked.min'
-  import hljs       from '../../assets/js/highlight.pack'
+  import marked from '../../assets/js/marked.min'
+  import hljs from '../../assets/js/highlight.pack'
 
-  export default{
-    data(){
+  export default {
+    data () {
       return {
         inspected: false,
         markedContent: ''
       }
     },
-    created(){
+    created () {
       const id = this.$route.query.id
       if (id) return this.getArticle(id)
       this.SET_ARTICLE({date: new Date()})
     },
-    updated(){
+    updated () {
       this.highlight()
     },
     methods: {
-      save(){
+      save () {
         this.saveArticle()
           .then(() => this.$router.push({name: 'articles'}))
           .catch(err => console.log(err))
       },
-      highlight(){
+      highlight () {
         setTimeout(() => {
           hljs.initHighlighting.called = false
           hljs.initHighlighting()
@@ -58,29 +52,31 @@
     },
     computed: {
       content: {
-        get(){
+        get () {
           this.markedContent = marked(
             this.$store.state.article.content || '',
             {sanitize: true}
           )
           this.highlight()
+
           return this.$store.state.article.content
         },
-        set(value){
+        set (value) {
           this.$store.commit('UPDATE_CONTENT', value)
         }
       },
       title: {
-        get(){
+        get () {
           return this.$store.state.article.title
         },
-        set(value){
+        set (value) {
           this.$store.commit('UPDATE_TITLE', value)
         }
       }
     }
   }
 </script>
+
 <style lang="sass" rel="stylesheet/scss">
   @import "../../style/mixins.scss";
 

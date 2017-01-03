@@ -31,22 +31,26 @@
     </div>
   </div>
 </template>
-<script>
-  import {get}        from '../../assets/js/cookieUtil'
-  import StatusBar    from './StatusBar.vue'
-  import {mapState, mapMutations}   from 'vuex'
 
-  export default{
-    created(){
+<script>
+  import {get} from '../../assets/js/cookieUtil'
+  import StatusBar from './StatusBar.vue'
+  import {mapState, mapMutations} from 'vuex'
+
+  export default {
+    created () {
       const user = get('user')
       if (!user) this.$router.push('/')
       if (user && !this.user.name) this.SET_USER({name: user, pwd: ''})
     },
-    components: {StatusBar},
+    components: {
+      StatusBar
+    },
     computed: mapState(['user']),
     methods: mapMutations(['SET_USER'])
   }
 </script>
+
 <style lang="sass" rel="stylesheet/scss" scoped>
   $pictureSize: 100px;
 

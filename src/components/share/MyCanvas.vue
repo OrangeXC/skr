@@ -1,9 +1,10 @@
 <template>
   <canvas id="canvas" class="canvas"></canvas>
 </template>
+
 <script>
-  export default{
-    mounted(){
+  export default {
+    mounted () {
       const canvas = document.getElementById('canvas')
       const ctx = canvas.getContext('2d')
       let width = window.innerWidth
@@ -133,6 +134,7 @@
     }
   }
 </script>
+
 <style>
   .canvas {
     position: fixed;

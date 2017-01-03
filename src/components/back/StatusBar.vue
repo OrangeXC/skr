@@ -1,9 +1,7 @@
 <template>
   <header class="statusBar">
     <div class="user">
-      <span>
-          {{time}}好, {{user.name}}
-      </span>
+      <span>{{time}}好, {{user.name}}</span>
       <button @click="logout">
         <span>登出</span>
         <i class="fa fa-sign-out"></i>
@@ -11,13 +9,14 @@
     </div>
   </header>
 </template>
+
 <script>
   import {unset} from '../../assets/js/cookieUtil'
   import {mapState, mapMutations} from 'vuex'
 
-  export default{
+  export default {
     methods: {
-      logout() {
+      logout () {
         unset('user', '/', window.location.hostname)
         this.SET_USER({name: '', pwd: ''})
         this.$router.push('/')
@@ -25,7 +24,7 @@
       ...mapMutations(['SET_USER'])
     },
     computed: {
-      time(){
+      time () {
         const hours = new Date().getHours()
         if (hours > 5 && hours < 12)  return '早上'
         if (hours > 11 && hours < 19) return '下午'
@@ -35,6 +34,7 @@
     }
   }
 </script>
+
 <style lang="sass" rel="stylesheet/scss" scoped>
   @import "../../style/mixins.scss";
 
