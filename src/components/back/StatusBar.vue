@@ -26,7 +26,7 @@
     computed: {
       time () {
         const hours = new Date().getHours()
-        if (hours > 5 && hours < 12)  return '早上'
+        if (hours > 5 && hours < 12) return '早上'
         if (hours > 11 && hours < 19) return '下午'
         return '晚上'
       },

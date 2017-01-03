@@ -34,8 +34,15 @@
     },
     methods: {
       doLogin () {
-        if (!this.name.length) return this.info = '请输入正常的用户名'
-        if (!this.pwd.length) return this.info = '请输入正常的密码'
+        if (!this.name.length) {
+          this.info = '请输入正常的用户名'
+          return
+        }
+
+        if (!this.pwd.length) {
+          this.info = '请输入正常的密码'
+          return
+        }
 
         this.login({name: this.name, pwd: this.pwd})
           .then(() => {
@@ -43,7 +50,7 @@
             set('user', this.name, date, '/', window.location.hostname)
             this.$router.push({path: '/console'})
           })
-          .catch(msg => this.info = msg)
+          .catch(msg => (this.info = msg))
       },
       clearInfo () {
         this.info = ''

@@ -16,7 +16,7 @@ const doToast = (state, commit, payload) => {
   return state.toast.promise
 }
 
-Promise.prototype.finally = function (callback) {
+Promise.finally = function (callback) {
   return this.then(
     value => Promise.resolve(callback()).then(() => value),
     reason => Promise.resolve(callback()).then(() => {
