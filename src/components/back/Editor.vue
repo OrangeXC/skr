@@ -29,8 +29,10 @@
     },
     created () {
       const id = this.$route.query.id
+
       if (id) return this.getArticle(id)
-      this.SET_ARTICLE({date: new Date()})
+
+      this.SET_ARTICLE({date: new Date(), title: '', content: ''})
     },
     updated () {
       this.highlight()
