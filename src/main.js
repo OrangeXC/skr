@@ -23,6 +23,10 @@ Vue.filter('toDate', date => {
 new Vue({
   router,
   store,
-  components: { Spinner, Toast, MyCanvas },
+  components: {
+    Spinner,
+    Toast,
+    MyCanvas
+  },
   computed: mapState(['isLoading', 'isToasting'])
 }).$mount('#App')

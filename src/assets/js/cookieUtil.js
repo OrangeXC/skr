@@ -2,13 +2,15 @@ function get (name) {
   let cookieName = encodeURIComponent(name) + '=',
       cookieStart = document.cookie.indexOf(cookieName),
       cookieValue = null,
-      cookieEnd=null
+      cookieEnd = null
 
   if (cookieStart > -1) {
     cookieEnd = document.cookie.indexOf(';', cookieStart)
-    if (cookieEnd == -1)cookieEnd = document.cookie.length
+    if (cookieEnd == -1) cookieEnd = document.cookie.length
   }
+
   cookieValue = decodeURIComponent(document.cookie.substr(cookieStart + cookieName.length, cookieEnd))
+
   return cookieValue
 }
 
