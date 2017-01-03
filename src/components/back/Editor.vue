@@ -86,6 +86,7 @@
 
   section.editor {
     height: 100%;
+
     .title {
       text-align: center;
       box-sizing: border-box;
@@ -96,6 +97,7 @@
       font-size: 30px;
       color: $black1;
     }
+
     textarea, button, article {
       box-sizing: border-box;
       border-radius: 6px;
@@ -106,47 +108,57 @@
       line-height: 1.8;
       border: 1px solid $green1;
     }
+
     textarea, article {
       resize: none;
       padding: 20px;
       overflow-y: auto;
     }
+
     button {
       @include greenButton();
       margin: 0 10px;
       width: 20px;
       text-align: center;
     }
+
     .edit, .inspect {
       height: 80%;
       margin: 0 50px;
       overflow: hidden;
     }
+
     .edit {
       textarea {
         width: calc(100% - 40px);
       }
+
       article {
         width: 0;
       }
     }
+
     .inspect {
       textarea {
         width: calc(50% - 20px);
       }
+
       article {
         width: calc(50% - 20px);
       }
     }
+
     .panel {
       margin: 20px 50px;
       position: relative;
       height: 30px;
       line-height: 30px;
+
       input {
         text-align: center;
         border-bottom: 1px solid $green1;
       }
+
       button.saveArticle {
         @include greenButton();
         float: right;
@@ -154,12 +166,15 @@
         width: 80px;
       }
     }
+
     article {
       line-height: 1.6;
       padding-bottom: 160px;
+
       h2, h3, h4, h5, h6 {
         position: relative;
         margin: 1em 0;
+
         &:before {
           content: "#";
           color: $green1;
@@ -170,31 +185,38 @@
           font-weight: bold;
         }
       }
+
       h4, h5, h6 {
         &:before {
           content: ""
         }
       }
+
       h2, h3 {
         font-size: 22px
       }
+
       h4, h5, h6 {
         font-size: 18px
       }
+
       a {
         color: $green1;
         word-break: break-all;
       }
+
       blockquote {
         margin: 2em 0;
         padding-left: 20px;
         border-left: 4px solid $green1;
       }
+
       img {
         display: block;
         max-width: 100%;
         margin: 1em auto
       }
+
       code,
       pre {
         font-size: 0.8em;

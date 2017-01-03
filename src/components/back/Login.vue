@@ -2,7 +2,7 @@
   <section class="login">
     <div class="form" @keyup.enter="doLogin">
       <p class="icon">
-        <i class="fa fa-fire fa-2x"></i>
+        Login
       </p>
       <p class="input">
         <i class="fa fa-user fa-fw"></i>
@@ -23,7 +23,7 @@
       </p>
       <p class="info">{{info}}</p>
       <p>
-        <button @click="doLogin()">登陆
+        <button @click="doLogin()">登录
         </button>
       </p>
     </div>

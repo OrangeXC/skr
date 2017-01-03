@@ -50,29 +50,36 @@
 
   section.archive {
     padding-bottom: 160px;
+
     ul {
       padding: 0;
+
       li {
         list-style: none;
         padding: 2px 0 0 40px;
+
         p {
           font-size: 20px;
           color: #34495e;
         }
+
         span {
           display: block;
           margin: 4px 0;
         }
+
         span.date {
           float: left;
           width: 125px;
           color: #7f8c8d;
         }
+
         span.title {
           margin-left: 130px;
           color: #42b983;
           cursor: pointer;
           word-break: break-all;
+
           &:hover {
             color: #267B54;
           }

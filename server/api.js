@@ -35,7 +35,7 @@ router.post('/api/login', (req, res) => {
         res.send({state: 0, msg: '账号不存在'})
         break
       case doc.pwd === pwd:
-        res.send({state: 1, msg: '登陆成功'})
+        res.send({state: 1, msg: '登录成功'})
         break
       case doc.pwd !== pwd:
         res.send({state: 2, msg: '密码错误'})

@@ -1,10 +1,5 @@
 <template>
   <header class="statusBar">
-    <router-link :to="{path:'/archive'}"
-                 tag="button"
-                 class="home">
-      <i class="fa fa-fire fa-2x"></i>
-    </router-link>
     <div class="user">
       <span>
           {{time}}好, {{user.name}}
@@ -47,14 +42,17 @@
   header.statusBar {
     height: $headerHeight;
     z-index: 1;
+
     .home {
       width: 200px;
       height: $headerHeight;
     }
+
     .user {
       height: $headerHeight;
       float: right;
       right: 20px;
+
       button {
         @include greenButton();
         width: 80px;

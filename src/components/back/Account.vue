@@ -45,17 +45,21 @@
     .password {
       width: 260px;
       margin: 100px auto 40px auto;
+
       input {
+        width:225px;
         height: 30px;
         padding: 6px;
         margin: 10px auto;
         border-bottom: 1px solid $green1;
       }
     }
+
     .panel {
       position: absolute;
       bottom: 40px;
       right: 100px;
+
       button {
         @include greenButton();
         height: 30px;

@@ -49,6 +49,7 @@
 </script>
 <style lang="sass" rel="stylesheet/scss" scoped>
   $pictureSize: 100px;
+
   .container {
     height: 100%;
   }
@@ -60,22 +61,27 @@
     height: calc(100% - 50px);
     width: 200px;
     background-color: transparent;
+
     .circle {
       width: $pictureSize;
       height: $pictureSize;
       margin: auto;
       border-radius: 50%;
       overflow: hidden;
+
       img {
         width: $pictureSize;
         height: $pictureSize;
       }
     }
+
     menu {
       margin: 20px 0;
       padding: 0;
+
       ul {
         padding: 0 50px;
+
         > li {
           transition: all 0.4s;
           margin-top: 10px;
@@ -83,10 +89,12 @@
           cursor: pointer;
           height: 40px;
           line-height: 40px;
+
           > span {
             display: inline-block;
             margin-left: 20px;
           }
+
           &:hover {
             padding-left: 8px;
           }
