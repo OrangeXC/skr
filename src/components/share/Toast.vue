@@ -4,7 +4,7 @@
       <p>{{toast.info}}</p>
       <div class="panel">
         <button @click="toast.toastResolve" class="confirm">确定</button>
-        <button @click="toast.toastReject" class="cancel" v-if="toast.btnNum===2">取消</button>
+        <button @click="toast.toastReject" class="cancel" v-if="toast.btnNum === 2">取消</button>
       </div>
     </div>
   </div>
