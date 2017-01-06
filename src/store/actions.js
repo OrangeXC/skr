@@ -39,7 +39,6 @@ export default {
     const start = beginLoading(commit)
     return Vue.http.get('/api/getArticle', {params: {id}})
       .then(response => {
-        debugger
         stopLoading(commit, start)
         commit('SET_ARTICLE', response.data)
       })

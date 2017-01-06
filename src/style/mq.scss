@@ -7,12 +7,12 @@ section.container {
     padding: 20px 100px;
     margin-bottom: 60px;
 
-    div.circle{
+    div.circle {
       float:left;
     }
   }
 
-  .wrap,footer {
+  .wrap, footer {
     width: 700px;
     margin: 0 auto;
   }
@@ -23,8 +23,7 @@ section.container {
     padding: 20px 0;
     margin-bottom: 20px;
 
-    div.circle,
-    ul.menu {
+    div.circle, ul.menu {
       margin: 0 auto;
       float: none;
       display: block;
@@ -36,6 +35,7 @@ section.container {
       }
     }
   }
+
   .wrap, footer {
     width: 100%;
   }
