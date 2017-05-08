@@ -51,7 +51,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
   $pictureSize: 100px;
 
   .container {

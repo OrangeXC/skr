@@ -39,7 +39,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
   main.wrap {
     min-height: 100%;
     position: relative;

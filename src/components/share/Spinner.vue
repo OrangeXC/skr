@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<style lang="sass" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
   $offset: 187;
   $duration: 1.4s;
 

@@ -9,7 +9,7 @@
   </footer>
 </template>
 
-<style lang="sass" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
   footer {
     position: absolute;
     bottom: 0;

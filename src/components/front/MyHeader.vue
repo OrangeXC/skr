@@ -23,7 +23,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
 
   header.myHeader {
     min-height: 60px;

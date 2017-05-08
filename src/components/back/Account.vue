@@ -2,10 +2,14 @@
   <section class="account">
     <div class="title">修改密码</div>
     <div class="password">
-      <i class="fa fa-key fa-fw"></i>
-      <input type="password" placeholder="输入新密码" v-model="pwd"><br>
-      <i class="fa fa-key fa-fw"></i>
-      <input type="password" placeholder="再输入一次" v-model="pwdRepeat">
+      <p class="input">
+        <i class="fa fa-key fa-fw"></i>
+        <input type="password" placeholder="输入新密码" v-model="pwd">
+      </p>
+      <p class="input">
+        <i class="fa fa-key fa-fw"></i>
+        <input type="password" placeholder="再输入一次" v-model="pwdRepeat">
+      </p>
     </div>
     <div class="panel">
       <button @click="savePwd">保存</button>
@@ -31,7 +35,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss" scoped>
   @import "../../style/mixins.scss";
 
   section.account {
@@ -46,7 +50,7 @@
       margin: 100px auto 40px auto;
 
       input {
-        width:225px;
+        width: 220px;
         height: 30px;
         padding: 6px;
         margin: 10px auto;
