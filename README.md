@@ -1,7 +1,5 @@
 # skr
 
-> Nuxt.js blog and cms
-
 ## Build Setup
 
 ``` bash
