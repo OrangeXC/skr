@@ -1,0 +1,43 @@
+{
+  "name": "skr",
+  "version": "1.0.0",
+  "description": "blog and manager",
+  "author": "OrangeXC <842012622@qq.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt build && nuxt start",
+    "precommit": "npm run lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@digibytes/markdownit": "^1.2.2",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.1",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.6",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mavon-editor": "^2.6.17",
+    "mongoose": "^5.2.7",
+    "nuxt-edge": "^2.0.0-25564213.b4ab277",
+    "source-map-support": "^0.5.8",
+    "whatwg-fetch": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^5.3.0",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0"
+  },
+  "license": "MIT"
+}
