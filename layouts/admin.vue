@@ -6,6 +6,7 @@
         background-color="#545c64"
         text-color="#fff"
         active-text-color="#ffd04b"
+        :default-active="$route.path"
         router
       >
         <el-submenu index="article">
@@ -20,19 +21,22 @@
           <i class="el-icon-menu"></i>
           <span>链接</span>
         </el-menu-item>
+        <el-menu-item index="/admin/password">
+          <i class="el-icon-setting"></i>
+          <span>修改密码</span>
+        </el-menu-item>
       </el-menu>
     </el-aside>
 
     <el-container>
       <el-header style="text-align: right">
-        <el-dropdown @command="handleCommand">
-          <i class="el-icon-setting" style="margin-right: 15px"></i>
-          <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item command="changePassword">修改密码</el-dropdown-item>
-            <el-dropdown-item command="logout">Logout</el-dropdown-item>
-          </el-dropdown-menu>
-        </el-dropdown>
         <span>{{ $store.state.authUser && $store.state.authUser.username }}</span>
+        <img
+          src="~assets/img/logout.png"
+          alt="logout"
+          class="logout"
+          @click="handleLogout"
+        >
       </el-header>
 
       <el-main>
@@ -48,14 +52,8 @@ import { mapActions } from 'vuex'
 export default {
   methods: {
     ...mapActions(['logout']),
-    handleCommand (command) {
-      switch (command) {
-        case 'logout':
-          this.logout().then(() => this.$router.push('/'))
-          break
-        default:
-          return
-      }
+    handleLogout () {
+      this.logout()
     }
   }
 }
@@ -63,10 +61,20 @@ export default {
 
 <style scoped>
 .el-header {
-  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-size: 20px;
 }
 
 .el-aside {
   color: rgb(191, 203, 217);
+}
+
+.logout {
+  width: 32px;
+  margin-left: 20px;
+  cursor: pointer;
 }
 </style>

@@ -26,11 +26,9 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 export default {
-  async asyncData () {
-    let { data } = await axios.get('/api/articles', {
+  async asyncData ({ app }) {
+    let { data } = await app.$axios.get('/api/articles', {
       params: {
         status: 'published'
       }

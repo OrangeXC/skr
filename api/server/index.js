@@ -23,27 +23,30 @@ const linkSchema = new Schema({
 const Models = {
   User: mongoose.model('User', userSchema),
   Article: mongoose.model('Article', articleSchema),
-  Link: mongoose.model('Link', linkSchema),
-  initialized: false
+  Link: mongoose.model('Link', linkSchema)
 }
 
 const initialize = function () {
   Models.User.find(null, function (err, data) {
     if (err) {
       console.log(err)
-    } else if (!data.length) {
+
+      return
+    }
+
+    if (!data.length) {
       console.log('Database opens for the first time...')
 
       Promise.all(init.map(item => new Models[item.type](item).save()))
         .then(() => console.log('Initialize successfully.'))
         .catch(() => console.log('Something went wrong during initializing.'))
-    } else {
-      Models.initialized = true
     }
   })
 }
 
-mongoose.connect('mongodb://127.0.0.1/blog')
+mongoose.connect('mongodb://127.0.0.1/blog', {
+  useNewUrlParser: true
+})
 
 const mongooseConnection = mongoose.connection
 

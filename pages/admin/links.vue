@@ -2,6 +2,7 @@
   <section>
     <el-table
       :data="links"
+      row-key="_id"
       v-loading.body="listLoading"
       border
       fit
@@ -20,9 +21,15 @@
         </template>
       </el-table-column>
 
+      <el-table-column align="center" label="拖拽" width="60">
+        <template slot-scope="scope">
+          <i class="el-icon-rank"></i>
+        </template>
+      </el-table-column>
+
       <el-table-column align="center" label="操作" width="100">
         <template slot-scope="scope">
-          <el-button type="danger" size="small" icon="el-icon-delete" @click="remove(scope.$index)">删除</el-button>
+          <el-button icon="el-icon-delete" size="small" type="danger" @click="remove(scope.$index)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -34,11 +41,11 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
+import Sortable from 'sortablejs'
 
 export default {
-  async asyncData () {
-    let { data } = await axios.get('/api/links')
+  async asyncData ({ app }) {
+    let { data } = await app.$axios.get('/api/links')
 
     return {
       links: data
@@ -46,8 +53,27 @@ export default {
   },
   data () {
     return {
-      listLoading: false
+      listLoading: false,
+      sortable: null
     }
+  },
+  mounted () {
+    const table = document.querySelector('.el-table__body-wrapper tbody')
+    const self = this
+
+    this.sortable = new Sortable(table, {
+      ghostClass: 'sortable-ghost',
+      setData (dataTransfer) {
+        dataTransfer.setData('Text', '')
+      },
+      onEnd ({ newIndex, oldIndex }) {
+        const targetRow = self.links.splice(oldIndex, 1)[0]
+        self.links.splice(newIndex, 0, targetRow)
+      }
+    })
+  },
+  destroyed () {
+    this.sortable.destroy()
   },
   methods: {
     add () {
@@ -64,7 +90,7 @@ export default {
 
       this.links = this.links.filter(({ name, href }) => name && href)
 
-      axios.post('/api/links', this.links).then(() => {
+      this.$axios.post('/api/links', this.links).then(() => {
         this.listLoading = false
 
         this.$message.success('链接保存成功！')
@@ -76,10 +102,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .action-bar {
   margin-top: 20px;
 
   text-align: right;
+}
+
+.el-table__row {
+  &.sortable-ghost {
+    opacity: 0.8;
+    color: #fff;
+    background: #42b983;
+  }
+}
+
+.el-icon-rank {
+  cursor: move;
+
+  vertical-align: -4px;
+  font-size: 32px;
 }
 </style>

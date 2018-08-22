@@ -1,17 +1,15 @@
 <template>
-  <article>
+  <article class="markdown-body">
     <h1>{{ article.title }}</h1>
-    <p class="info">{{ article.date | format }}</p>
-    <div class="markdown-body" v-html="$md.render(article.content)"></div>
+    <blockquote>{{ article.date | format }}</blockquote>
+    <div v-html="$md.render(article.content)"></div>
   </article>
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 export default {
-  asyncData ({ params, error }) {
-    return axios.get(`/api/articles/${params.id}`).then(res => ({
+  asyncData ({ app, params, error }) {
+    return app.$axios.get(`/api/articles/${params.id}`).then(res => ({
       article: res.data
     })).catch(err =>
       error({ statusCode: 404, message: 'Article not found' })
@@ -25,6 +23,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 @import '~/assets/css/github-markdown.css';
 </style>

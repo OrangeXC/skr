@@ -10,10 +10,8 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 export default {
-  asyncData ({ params, error }) {
+  asyncData ({ app, params, error }) {
     if (params.id === 'new') {
       return {
         article: {
@@ -23,14 +21,16 @@ export default {
       }
     }
 
-    return axios.get(`/api/articles/${params.id}`).then(res => ({
+    return app.$axios.get(`/api/articles/${params.id}`).then(res => ({
       article: res.data
     })).catch(err =>
       error({ statusCode: 404, message: 'Article not found' })
     )
   },
-  data: {
-    loading: null
+  data () {
+    return {
+      loading: null
+    }
   },
   methods: {
     showLoading () {
@@ -60,12 +60,12 @@ export default {
       this.article.status = status
 
       if (this.article._id) {
-        axios.put(`/api/articles/${this.article._id}`, this.article).then(() => {
+        this.$axios.put(`/api/articles/${this.article._id}`, this.article).then(() => {
           this.closeLoading()
           this.showMessage(status)
         })
       } else {
-        axios.post(`/api/articles/new`, this.article).then(() => {
+        this.$axios.post(`/api/articles/new`, this.article).then(() => {
           this.closeLoading()
           this.showMessage(status)
         })

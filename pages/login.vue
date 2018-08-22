@@ -20,6 +20,11 @@
 import { mapActions } from 'vuex'
 
 export default {
+	fetch ({ store, redirect }) {
+    if (store.state.authUser) {
+      redirect('/admin')
+    }
+  },
 	head () {
     return {
       title: 'Skr - Login'

@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
-    "axios": "^0.18.0",
+    "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/pwa": "^2.0.8",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",
     "cross-env": "^5.2.0",
@@ -22,7 +23,8 @@
     "express-session": "^1.15.6",
     "mavon-editor": "^2.6.17",
     "mongoose": "^5.2.9",
-    "nuxt-edge": "^2.0.0-25579690.716c04f",
+    "nuxt-edge": "^2.0.0-25581162.820f0fa",
+    "sortablejs": "^1.7.0",
     "source-map-support": "^0.5.9",
     "whatwg-fetch": "^2.0.4"
   },

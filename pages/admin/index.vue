@@ -33,7 +33,9 @@
           <router-link :to="`/admin/articles/${scope.row._id}`">
             <el-button type="primary" size="small" icon="el-icon-edit">编辑</el-button>
           </router-link>
-          <el-button type="danger" size="small" icon="el-icon-delete" @click="remove(scope.row)">删除</el-button>
+          <el-button type="danger" size="small" icon="el-icon-delete" @click="remove(scope.row, scope.$index)">
+            {{ scope.row.status === 'deleted' ? '强删' : '删除' }}
+          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -41,11 +43,9 @@
 </template>
 
 <script>
-import axios from '~/plugins/axios'
-
 export default {
-  async asyncData () {
-    let { data } = await axios.get('/api/articles')
+  async asyncData ({ app }) {
+    let { data } = await app.$axios.get('/api/articles')
 
     return {
       articles: data
@@ -68,12 +68,35 @@ export default {
     }
   },
   methods: {
-    remove (article) {
+    remove (article, index) {
+      if (article.status === 'deleted') {
+        this.$confirm('此操作将永久删除该文章, 是否继续?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.listLoading = true
+
+          this.$axios.delete(`/api/articles/${article._id}`).then(() => {
+            this.articles.splice(index, 1)
+            this.listLoading = false
+            this.$message.success('删除成功！')
+          })
+        }).catch(() => {
+          this.listLoading = false
+          this.$message.info('已取消强制删除')
+        })
+
+        return
+      }
+
       this.listLoading = true
 
       article.status = 'deleted'
 
-      axios.put(`/api/articles/${article._id}`, article).then(() => {
+      this.$axios.put(`/api/articles/${article._id}`, article).then(() => {
+        this.listLoading = false
+      }).catch(() => {
         this.listLoading = false
       })
     }

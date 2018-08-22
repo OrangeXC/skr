@@ -63,6 +63,8 @@ module.exports = {
     '~/api'
   ],
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
     '@digibytes/markdownit'
   ],
   markdownit: {

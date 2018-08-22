@@ -1,5 +1,3 @@
-import axios from '~/plugins/axios'
-
 export const state = () => ({
   authUser: null,
   links: []
@@ -16,18 +14,18 @@ export const mutations = {
 
 export const actions = {
   // nuxtServerInit is called by Nuxt.js before server-rendering every page
-  async nuxtServerInit ({ commit }, { req }) {
+  async nuxtServerInit ({ commit }, { app, req }) {
     if (req.session && req.session.authUser) {
       commit('SET_USER', req.session.authUser)
     }
 
-    const { data } = await axios.get('/api/links')
+    const { data } = await app.$axios.get('/api/links')
 
     commit('SET_LINK', data)
   },
   async login ({ commit }, { username, password }) {
     try {
-      const { data } = await axios.post('/api/login', { username, password })
+      const { data } = await this.$axios.post('/api/login', { username, password })
       commit('SET_USER', data)
     } catch (error) {
       if (error.response && error.response.status === 401) {
@@ -37,7 +35,8 @@ export const actions = {
     }
   },
   async logout ({ commit }) {
-    await axios.post('/api/logout')
+    await this.$axios.post('/api/logout')
     commit('SET_USER', null)
+    this.app.router.push('/')
   }
 }

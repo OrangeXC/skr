@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import {
   Button,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
   Menu,
   Submenu,
   MenuItem,
@@ -20,20 +17,18 @@ import {
   Aside,
   Main,
   Message,
+  MessageBox,
   Loading
 } from 'element-ui'
 
 Vue.use(Button)
-Vue.use(Dropdown)
-Vue.use(DropdownItem)
-Vue.use(DropdownMenu)
 Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(Submenu)
 Vue.use(Input)
 Vue.use(Icon)
-Vue.use(Row);
-Vue.use(Col);
+Vue.use(Row)
+Vue.use(Col)
 Vue.use(Card)
 Vue.use(Table)
 Vue.use(TableColumn)
@@ -47,3 +42,4 @@ Vue.use(Loading.directive)
 
 Vue.prototype.$loading = Loading.service
 Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm
