@@ -1,6 +1,6 @@
 <template>
   <footer>
-    &copy;2016-2018 Orange, 842012622@qq.com
+    &copy;2018 Skr, OrangeXC(842012622@qq.com)
   </footer>
 </template>
 

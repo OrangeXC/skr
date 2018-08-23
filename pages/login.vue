@@ -5,7 +5,7 @@
 
       <div class="form" v-show="!loading">
         <input v-model="username" type="text" placeholder="Username">
-        <input v-model="password" type="password" placeholder="Password">
+        <input v-model="password" type="password" placeholder="Password" @keyup.enter="submit">
         <button @click="submit">Login</button>
       </div>
     </div>

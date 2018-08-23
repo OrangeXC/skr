@@ -24,5 +24,5 @@ export default {
 </script>
 
 <style>
-@import '~/assets/css/github-markdown.css';
+@import "mavon-editor/dist/markdown/github-markdown.min.css";
 </style>

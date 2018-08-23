@@ -3,6 +3,7 @@
     "type": "Article",
     "title": "Hello World",
     "date": "2018/8/21",
+    "status": "published",
     "content": "## Hello Orange!"
   }, {
     "type": "Link",

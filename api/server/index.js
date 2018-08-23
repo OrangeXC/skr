@@ -44,7 +44,7 @@ const initialize = function () {
   })
 }
 
-mongoose.connect('mongodb://127.0.0.1/blog', {
+mongoose.connect('mongodb://127.0.0.1/skr', {
   useNewUrlParser: true
 })
 

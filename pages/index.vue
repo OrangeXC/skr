@@ -1,7 +1,7 @@
 <template>
   <section class="wrap">
     <aside class="aside">
-      <img class="avatar" src="~assets/img/me.jpg" alt="avatar">
+      <img class="avatar" src="~assets/img/avatar.jpg" alt="avatar">
       <p class="name">Orange</p>
       <p class="info">Go big or go home</p>
       <div class="icons">

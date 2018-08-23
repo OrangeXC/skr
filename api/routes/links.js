@@ -5,7 +5,7 @@ const router = Router()
 const fn = () => {}
 
 router.get('/links', (req, res) => {
-  Link.find(null, (err, data) => {
+  Link.find({}, (err, data) => {
     if (err) res.status(500).end()
 
     res.send(data)
@@ -15,7 +15,7 @@ router.get('/links', (req, res) => {
 router.post('/links', (req, res) => {
   const links = req.body || []
 
-  Link.remove(null, fn)
+  Link.remove({}, fn)
 
   const promises = links
     .map(({ name, href }) => new Link({ name, href }).save())
