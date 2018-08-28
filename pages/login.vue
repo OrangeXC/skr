@@ -144,9 +144,10 @@ $prim: #53e3a6;
 	input {
 		display: block;
 		outline: 0;
+		box-sizing: border-box;
 		border: 1px solid rgba(255, 255, 255, 0.4);
 		background-color: rgba(255, 255, 255, 0.2);
-		width: 250px;
+		width: 300px;
 
 		border-radius: 3px;
 		padding: 10px 15px;
@@ -166,7 +167,7 @@ $prim: #53e3a6;
 
 		&:focus {
 			background-color: #fff;
-			width: 300px;
+			width: 360px;
 
 			color: $prim;
 		}
@@ -179,7 +180,7 @@ $prim: #53e3a6;
 		padding: 10px 15px;
 		color: $prim;
 		border-radius: 3px;
-		width: 250px;
+		width: 300px;
 		cursor: pointer;
 		font-size: 18px;
 		transition-duration: 0.25s;
