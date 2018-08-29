@@ -6,6 +6,7 @@
 * express
 * mongodb
 * markdown
+* pwa
 
 ## Init data
 
