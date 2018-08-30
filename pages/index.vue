@@ -18,8 +18,13 @@
     </aside>
     <ul>
       <li class="article-item" v-for="article in articles" :key="article._id">
-        <h2 class="title" @click="toDetail(article._id)">{{ article.title }}</h2>
-        <p class="date">{{ article.date | format }}</p>
+        <h2 class="article-item__title" @click="toDetail(article._id)">{{ article.title }}</h2>
+        <p class="article-item__info">
+          <i class="el-icon-date"></i>
+          {{ article.date | format }}
+          <i class="el-icon-view"></i>
+          {{ article.views }}
+        </p>
       </li>
     </ul>
   </section>
@@ -28,11 +33,7 @@
 <script>
 export default {
   async asyncData ({ app }) {
-    let { data } = await app.$axios.get('/api/articles', {
-      params: {
-        status: 'published'
-      }
-    })
+    let { data } = await app.$axios.get('/api/articles')
 
     return {
       articles: data
@@ -104,7 +105,7 @@ export default {
     line-height: 1;
   }
 
-  .title {
+  .article-item__title {
     cursor: pointer;
 
     font-weight: bold;
@@ -115,10 +116,14 @@ export default {
     }
   }
 
-  .date {
+  .article-item__info {
     margin-top: 10px;
     font-size: 12px;
     color: #5e6d82;
+
+    .el-icon-view {
+      margin-left: 10px;
+    }
   }
 }
 

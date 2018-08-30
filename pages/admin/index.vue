@@ -28,6 +28,12 @@
         </template>
       </el-table-column>
 
+      <el-table-column label="访问量" width="80">
+        <template slot-scope="scope">
+          <span>{{ scope.row.views }}</span>
+        </template>
+      </el-table-column>
+
       <el-table-column align="center" label="操作" width="200">
         <template slot-scope="scope">
           <router-link :to="`/admin/articles/${scope.row._id}`">
@@ -45,7 +51,7 @@
 <script>
 export default {
   async asyncData ({ app }) {
-    let { data } = await app.$axios.get('/api/articles')
+    let { data } = await app.$axios.get('/api/admin/articles')
 
     return {
       articles: data

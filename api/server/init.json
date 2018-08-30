@@ -4,6 +4,7 @@
     "title": "Hello World",
     "date": "2018/8/21",
     "status": "published",
+    "views": 0,
     "content": "## Hello Orange!"
   }, {
     "type": "Link",
