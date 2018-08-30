@@ -12,6 +12,7 @@ const articleSchema = new Schema({
   title: String,
   date: Date,
   status: String,
+  views: Number,
   content: String
 })
 

@@ -5,7 +5,28 @@ const router = Router()
 const fn = () => {}
 
 router.get('/articles', (req, res) => {
-  Article.find(req.query, null, { sort: { date: -1 } }, (err, data) => {
+  const query = {
+    status: 'published'
+  }
+  const fields = ['title', 'date', 'views']
+  const options = {
+    sort: { date: -1 }
+  }
+
+  Article.find(query, fields, options, (err, data) => {
+    if (err) res.status(500).send(err)
+
+    res.send(JSON.stringify(data))
+  })
+})
+
+router.get('/admin/articles', (req, res) => {
+  const fields = ['title', 'date', 'status', 'views']
+  const options = {
+    sort: { date: -1 }
+  }
+
+  Article.find({}, fields, options, (err, data) => {
     if (err) res.status(500).send(err)
 
     res.send(JSON.stringify(data))
@@ -14,8 +35,13 @@ router.get('/articles', (req, res) => {
 
 router.get('/articles/:id', (req, res) => {
   const id = req.params.id
+  const update = {}
 
-  Article.findById(id, (err, data) => {
+  if (!req.session.authUser) {
+    update.$inc = { views: 1 }
+  }
+
+  Article.findByIdAndUpdate(id, update, (err, data) => {
     if (err) res.status(500).send(err)
 
     res.send(data)
@@ -23,6 +49,8 @@ router.get('/articles/:id', (req, res) => {
 })
 
 router.post('/articles/new', (req, res) => {
+  req.body.views = 0
+
   new Article(req.body).save()
 
   res.status(200).end()
