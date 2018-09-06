@@ -20,10 +20,20 @@
       <li class="article-item" v-for="article in articles" :key="article._id">
         <h2 class="article-item__title" @click="toDetail(article._id)">{{ article.title }}</h2>
         <p class="article-item__info">
-          <i class="el-icon-date"></i>
-          {{ article.date | format }}
-          <i class="el-icon-view"></i>
-          {{ article.views }}
+          <span class="base">
+            <i class="el-icon-date"></i>
+            {{ article.date | format }}
+            <i class="el-icon-view"></i>
+            {{ article.views }}
+          </span>
+          <span class="tags">
+            <el-tag
+              v-for="tag in article.tags"
+              :key="tag"
+              size="mini"
+              type="info"
+            >{{ tag }}</el-tag>
+          </span>
         </p>
       </li>
     </ul>
@@ -117,12 +127,22 @@ export default {
   }
 
   .article-item__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 10px;
-    font-size: 12px;
-    color: #5e6d82;
 
-    .el-icon-view {
-      margin-left: 10px;
+    .base {
+      font-size: 14px;
+      color: #999;
+
+      .el-icon-view {
+        margin-left: 10px;
+      }
+    }
+
+    .el-tag--mini {
+      margin-left: 5px;
     }
   }
 }

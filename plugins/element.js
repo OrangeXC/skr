@@ -5,6 +5,8 @@ import {
   Submenu,
   MenuItem,
   Input,
+  Select,
+  Option,
   Icon,
   Row,
   Col,
@@ -26,6 +28,8 @@ Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(Submenu)
 Vue.use(Input)
+Vue.use(Select)
+Vue.use(Option)
 Vue.use(Icon)
 Vue.use(Row)
 Vue.use(Col)

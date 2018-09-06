@@ -4,7 +4,7 @@ const router = express.Router()
 
 // Create express instnace
 const app = express()
-const whiteList = ['/articles', '/links']
+const whiteList = ['/articles', '/tags', '/links']
 
 function isAllowUrl ({ url, method }) {
   let flag = false
@@ -51,12 +51,14 @@ router.use((req, res, next) => {
 const auth = require('./routes/auth')
 const users = require('./routes/users')
 const articles = require('./routes/articles')
+const tags = require('./routes/tags')
 const links = require('./routes/links')
 
 // Import API Routes
 app.use(auth)
 app.use(users)
 app.use(articles)
+app.use(tags)
 app.use(links)
 
 // Export the server middleware

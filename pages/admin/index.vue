@@ -8,15 +8,15 @@
       highlight-current-row
       style="width: 100%"
     >
-      <el-table-column width="160px" align="center" label="日期">
+      <el-table-column label="日期" width="160px" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.date | format }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column min-width="300px" label="标题">
+      <el-table-column label="标题" min-width="300px">
         <template slot-scope="scope">
-          <router-link class="link-type" :to="`/admin/articles/${scope.row._id}`">
+          <router-link class="link-type" :to="`/articles/${scope.row._id}`">
             <span>{{ scope.row.title }}</span>
           </router-link>
         </template>
@@ -28,13 +28,13 @@
         </template>
       </el-table-column>
 
-      <el-table-column label="访问量" width="80">
+      <el-table-column label="访问量" width="80" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.views }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="操作" width="200">
+      <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
           <router-link :to="`/admin/articles/${scope.row._id}`">
             <el-button type="primary" size="small" icon="el-icon-edit">编辑</el-button>
