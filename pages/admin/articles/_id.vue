@@ -1,6 +1,20 @@
 <template>
   <div>
     <el-input v-model="article.title" placeholder="标题"></el-input>
+    <el-select
+      v-model="article.tags"
+      multiple
+      filterable
+      allow-create
+      default-first-option
+      placeholder="请选择文章标签">
+      <el-option
+        v-for="item in tags"
+        :key="item"
+        :label="item"
+        :value="item"
+      ></el-option>
+    </el-select>
     <mavon-editor v-model="article.content" />
     <p class="action-bar">
       <el-button @click="submit('draft')">保存到草稿</el-button>
@@ -11,21 +25,32 @@
 
 <script>
 export default {
-  asyncData ({ app, params, error }) {
+  async asyncData ({ app, params, error }) {
+    const tags = await app.$axios.get('/api/tags')
+      .then(res => res.data)
+
     if (params.id === 'new') {
       return {
         article: {
           title: '',
+          tags: [],
           content: ''
-        }
+        },
+        tags
       }
     }
 
-    return app.$axios.get(`/api/articles/${params.id}`).then(res => ({
-      article: res.data
-    })).catch(err =>
+    try {
+      const article = await app.$axios.get(`/api/articles/${params.id}`)
+        .then(res => res.data)
+
+      return {
+        article,
+        tags
+      }
+    } catch (err) {
       error({ statusCode: 404, message: 'Article not found' })
-    )
+    }
   },
   data () {
     return {
@@ -60,15 +85,17 @@ export default {
       this.article.status = status
 
       if (this.article._id) {
-        this.$axios.put(`/api/articles/${this.article._id}`, this.article).then(() => {
-          this.closeLoading()
-          this.showMessage(status)
-        })
+        this.$axios.put(`/api/articles/${this.article._id}`, this.article)
+          .then(() => {
+            this.closeLoading()
+            this.showMessage(status)
+          })
       } else {
-        this.$axios.post(`/api/articles/new`, this.article).then(() => {
-          this.closeLoading()
-          this.showMessage(status)
-        })
+        this.$axios.post(`/api/articles/new`, this.article)
+          .then(() => {
+            this.closeLoading()
+            this.showMessage(status)
+          })
       }
     }
   },
@@ -82,6 +109,11 @@ export default {
 
 .v-note-wrapper {
   margin: 20px 0;
+}
+
+.el-select {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .action-bar {

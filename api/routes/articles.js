@@ -2,13 +2,12 @@ const { Router } = require('express')
 const { Article } = require('../server')
 
 const router = Router()
-const fn = () => {}
 
 router.get('/articles', (req, res) => {
   const query = {
     status: 'published'
   }
-  const fields = ['title', 'date', 'views']
+  const fields = ['title', 'date', 'views', 'tags']
   const options = {
     sort: { date: -1 }
   }
@@ -16,7 +15,7 @@ router.get('/articles', (req, res) => {
   Article.find(query, fields, options, (err, data) => {
     if (err) res.status(500).send(err)
 
-    res.send(JSON.stringify(data))
+    res.send(data)
   })
 })
 
@@ -29,7 +28,7 @@ router.get('/admin/articles', (req, res) => {
   Article.find({}, fields, options, (err, data) => {
     if (err) res.status(500).send(err)
 
-    res.send(JSON.stringify(data))
+    res.send(data)
   })
 })
 
@@ -56,16 +55,18 @@ router.post('/articles/new', (req, res) => {
   res.status(200).end()
 })
 
-router.put('/articles/:id', (req, res) => {
+router.put('/articles/:id', async (req, res) => {
   const id = req.params.id
 
-  Article.findByIdAndUpdate(id, req.body, fn)
+  await Article.findByIdAndUpdate(id, req.body, {
+    new: true
+  })
 
   res.send(req.body)
 })
 
 router.delete('/articles/:id', (req, res) => {
-  Article.findByIdAndRemove(req.params.id, fn)
+  Article.findByIdAndRemove(req.params.id)
 
   res.status(200).end()
 })

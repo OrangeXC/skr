@@ -1,7 +1,12 @@
 <template>
   <article class="markdown-body">
-    <h1>{{ article.title }}</h1>
-    <blockquote>{{ article.date | format }}</blockquote>
+    <h1 class="title">{{ article.title }}</h1>
+    <p class="info">
+      <i class="el-icon-date"></i>
+      发表于 {{ article.date | format }} |
+      <i class="el-icon-view"></i>
+      本文阅读量 {{ article.views }}
+    </p>
     <div v-html="$md.render(article.content)"></div>
   </article>
 </template>
@@ -25,4 +30,15 @@ export default {
 
 <style>
 @import "mavon-editor/dist/markdown/github-markdown.min.css";
+
+.title {
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+
+  font-size: 12px;
+  color: #999;
+}
 </style>

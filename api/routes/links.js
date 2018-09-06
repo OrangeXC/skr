@@ -2,7 +2,6 @@ const { Router } = require('express')
 const { Link } = require('../server')
 
 const router = Router()
-const fn = () => {}
 
 router.get('/links', (req, res) => {
   Link.find({}, (err, data) => {
@@ -15,7 +14,7 @@ router.get('/links', (req, res) => {
 router.post('/links', (req, res) => {
   const links = req.body || []
 
-  Link.remove({}, fn)
+  Link.remove({})
 
   const promises = links
     .map(({ name, href }) => new Link({ name, href }).save())
