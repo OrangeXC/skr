@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <my-header/>
-    <nuxt/>
+    <main class="main">
+      <my-aside />
+      <nuxt/>
+    </main>
     <my-footer/>
   </div>
 </template>
@@ -9,27 +12,35 @@
 <script>
 import MyHeader from '~/components/Header.vue'
 import MyFooter from '~/components/Footer.vue'
+import MyAside from '~/components/Aside.vue'
 
 export default {
   components: {
     MyHeader,
-    MyFooter
+    MyFooter,
+    MyAside
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
-  width: 920px;
+  max-width: 920px;
   min-height: 100vh;
   position: relative;
   margin: 0 auto;
   padding: 0 20px 20px;
 }
 
+.main {
+  position: relative;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 960px) {
-  .container {
-    width: 100%;
+  .main {
+    margin-left: 0;
   }
 }
 </style>

@@ -5,7 +5,7 @@
     "date": "2018/8/21",
     "status": "published",
     "views": 0,
-    "tags": [],
+    "tags": ["hello"],
     "content": "## Hello Orange!"
   }, {
     "type": "Link",

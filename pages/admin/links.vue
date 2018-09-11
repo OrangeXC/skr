@@ -97,6 +97,11 @@ export default {
       })
     }
   },
+  head () {
+    return {
+      title: 'Skr | 链接管理'
+    }
+  },
   layout: 'admin',
   middleware: 'auth'
 }
