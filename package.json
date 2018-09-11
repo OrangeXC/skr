@@ -22,11 +22,11 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "mavon-editor": "^2.6.17",
-    "mongoose": "^5.2.13",
-    "nuxt-edge": "^2.0.0-25602679.14e608b",
+    "mongoose": "^5.2.14",
+    "nuxt-edge": "^2.0.0-25609473.c77fa47",
     "sortablejs": "^1.7.0",
     "source-map-support": "^0.5.9",
-    "whatwg-fetch": "^2.0.4"
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
@@ -36,7 +36,7 @@
     "eslint-plugin-html": "^4.0.5",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0"
