@@ -22,7 +22,7 @@ export default {
   },
   head () {
     return {
-      title: `Skr - ${this.article.title}`
+      title: `Skr | 文章：${this.article.title}`
     }
   }
 }

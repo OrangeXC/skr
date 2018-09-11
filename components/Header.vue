@@ -5,6 +5,7 @@
     <img class="menu-btn" src="~assets/img/close.png" alt="close" v-else @click="toggleMenu">
     <nav class="nav" :class="{ 'mobile-nav': isMenuShow }">
       <ul>
+        <li @click="toTag">标签</li>
         <li v-for="link in links" :key="link.id" @click="open(link.href)">
           {{ link.name }}
         </li>
@@ -36,6 +37,9 @@ export default {
   methods: {
     toggleMenu () {
       this.isMenuShow = !this.isMenuShow
+    },
+    toTag () {
+      this.$router.push('/tags')
     },
     open (url) {
       window.open(url)

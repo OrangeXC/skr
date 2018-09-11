@@ -107,6 +107,11 @@ export default {
       })
     }
   },
+  head () {
+    return {
+      title: 'Skr | 控制台'
+    }
+  },
   layout: 'admin',
   middleware: 'auth'
 }

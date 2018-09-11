@@ -17,6 +17,10 @@
           <el-menu-item index="/admin/articles/new">新建文章</el-menu-item>
           <el-menu-item index="/admin">文章列表</el-menu-item>
         </el-submenu>
+        <el-menu-item index="/admin/tags">
+          <i class="el-icon-star-off"></i>
+          <span>标签</span>
+        </el-menu-item>
         <el-menu-item index="/admin/links">
           <i class="el-icon-menu"></i>
           <span>链接</span>

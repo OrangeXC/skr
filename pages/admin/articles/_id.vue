@@ -99,6 +99,11 @@ export default {
       }
     }
   },
+  head () {
+    return {
+      title: `Skr | 编辑：${this.article.title}`
+    }
+  },
   layout: 'admin',
   middleware: 'auth'
 }

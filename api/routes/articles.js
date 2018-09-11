@@ -12,6 +12,8 @@ router.get('/articles', (req, res) => {
     sort: { date: -1 }
   }
 
+  if (req.query.tag) query.tags = req.query.tag
+
   Article.find(query, fields, options, (err, data) => {
     if (err) res.status(500).send(err)
 

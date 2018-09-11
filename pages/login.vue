@@ -64,6 +64,11 @@ export default {
 				this.$message.error('登录失败，请检查用户名密码！')
 			})
     }
+	},
+	head () {
+    return {
+      title: 'Skr | 登录'
+    }
   }
 }
 </script>

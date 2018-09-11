@@ -41,6 +41,11 @@ export default {
       this.repeatPassword = ''
     }
   },
+  head () {
+    return {
+      title: 'Skr | 修改密码'
+    }
+  },
   layout: 'admin',
   middleware: 'auth'
 }
