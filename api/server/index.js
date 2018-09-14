@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const mongoosePaginate = require('mongoose-paginate')
 const init = require('./init.json')
 
 const Schema = mongoose.Schema
@@ -21,6 +22,8 @@ const linkSchema = new Schema({
   name: String,
   href: String
 })
+
+articleSchema.plugin(mongoosePaginate)
 
 const Models = {
   User: mongoose.model('User', userSchema),

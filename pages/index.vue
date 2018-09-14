@@ -1,6 +1,6 @@
 <template>
   <section class="wrap">
-    <articles :articles="articles"></articles>
+    <articles :initArticles="articles" :total="total"></articles>
   </section>
 </template>
 
@@ -9,10 +9,13 @@ import Articles from '~/components/Articles.vue'
 
 export default {
   async asyncData ({ app }) {
-    let { data } = await app.$axios.get('/api/articles')
+    const { data } = await app.$axios.get('/api/articles')
+
+    const { articles, total } = data
 
     return {
-      articles: data
+      articles,
+      total
     }
   },
   head () {
