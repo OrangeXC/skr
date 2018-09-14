@@ -1,7 +1,7 @@
 <template>
   <section>
     <el-table
-      :data="tags"
+      :data="currentPageData"
       v-loading.body="listLoading"
       border
       fit
@@ -55,6 +55,14 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="tags.length"
+      :page-size="1"
+      @current-change="currentChange">
+    </el-pagination>
   </section>
 </template>
 
@@ -76,7 +84,15 @@ export default {
   },
   data () {
     return {
+      currentPage: 1,
       listLoading: null
+    }
+  },
+  computed: {
+    currentPageData: function () {
+      const page = this.currentPage
+
+      return this.tags.slice((page - 1) * 1, page * 1)
     }
   },
   methods: {
@@ -132,6 +148,9 @@ export default {
         this.listLoading = false
         this.$message.info('删除已取消！')
       })
+    },
+    currentChange (page) {
+      this.currentPage = page
     }
   },
   head () {
@@ -153,5 +172,11 @@ export default {
   position: absolute;
   right: 15px;
   top: 10px;
+}
+
+.el-pagination {
+  margin-top: 10px;
+
+  text-align: center;
 }
 </style>
