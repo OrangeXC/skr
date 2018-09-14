@@ -92,7 +92,7 @@ export default {
     currentPageData: function () {
       const page = this.currentPage
 
-      return this.tags.slice((page - 1) * 1, page * 1)
+      return this.tags.slice((page - 1) * 10, page * 10)
     }
   },
   methods: {
