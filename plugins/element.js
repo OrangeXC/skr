@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import {
+  Pagination,
   Button,
   Menu,
   Submenu,
@@ -23,6 +24,7 @@ import {
   Loading
 } from 'element-ui'
 
+Vue.use(Pagination)
 Vue.use(Button)
 Vue.use(Menu)
 Vue.use(MenuItem)

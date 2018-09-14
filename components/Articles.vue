@@ -1,34 +1,51 @@
 <template>
-  <ul>
-    <li class="article-item" v-for="article in articles" :key="article._id">
-      <h2 class="article-item__title" @click="toDetail(article._id)">{{ article.title }}</h2>
-      <div class="article-item__info">
-        <p class="base">
-          <i class="el-icon-date"></i>
-          {{ article.date | format }}
-          <i class="el-icon-view"></i>
-          {{ article.views }}
-        </p>
-        <p class="tags">
-          <el-tag
-            v-for="tag in article.tags"
-            :key="tag"
-            size="mini"
-            type="info"
-            @click.native="toTag(tag)"
-          >{{ tag }}</el-tag>
-        </p>
-      </div>
-    </li>
-  </ul>
+  <div>
+    <ul>
+      <li class="article-item" v-for="article in articles" :key="article._id">
+        <h2 class="article-item__title" @click="toDetail(article._id)">{{ article.title }}</h2>
+        <div class="article-item__info">
+          <p class="base">
+            <i class="el-icon-date"></i>
+            {{ article.date | format }}
+            <i class="el-icon-view"></i>
+            {{ article.views }}
+          </p>
+          <p class="tags">
+            <el-tag
+              v-for="tag in article.tags"
+              :key="tag"
+              size="mini"
+              type="info"
+              @click.native="toTag(tag)"
+            >{{ tag }}</el-tag>
+          </p>
+        </div>
+      </li>
+    </ul>
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="total"
+      @current-change="currentChange">
+    </el-pagination>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    articles: {
+    initArticles: {
       type: Array,
       required: true
+    },
+    total: {
+      type: Number,
+      required: true
+    }
+  },
+  data () {
+    return {
+      articles: this.initArticles
     }
   },
   methods: {
@@ -37,6 +54,15 @@ export default {
     },
     toTag (tag) {
       this.$router.push(`/tags/${tag}`)
+    },
+    currentChange (page) {
+      this.$axios.get('/api/articles', {
+        params: {
+          page
+        }
+      }).then(({ data }) => {
+        this.articles = data.articles
+      })
     }
   }
 }
@@ -81,6 +107,25 @@ export default {
   .el-tag--mini {
     margin-left: 5px;
     cursor: pointer;
+  }
+}
+
+.el-pagination {
+  text-align: center;
+}
+
+.el-pagination.is-background /deep/ .el-pager {
+  li.active {
+    &:hover {
+      background-color: #333;
+    }
+
+    background-color: #333;
+  }
+
+  li:hover {
+    color: #fff;
+    background-color: #999;
   }
 }
 

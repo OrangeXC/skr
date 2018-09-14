@@ -45,16 +45,26 @@
         </template>
       </el-table-column>
     </el-table>
+
+    <el-pagination
+      background
+      layout="prev, pager, next"
+      :total="total"
+      @current-change="currentChange">
+    </el-pagination>
   </section>
 </template>
 
 <script>
 export default {
   async asyncData ({ app }) {
-    let { data } = await app.$axios.get('/api/admin/articles')
+    const { data } = await app.$axios.get('/api/admin/articles')
+
+    const { articles, total } = data
 
     return {
-      articles: data
+      articles,
+      total
     }
   },
   data () {
@@ -105,6 +115,15 @@ export default {
       }).catch(() => {
         this.listLoading = false
       })
+    },
+    currentChange (page) {
+      this.$axios.get('/api/admin/articles', {
+        params: {
+          page
+        }
+      }).then(({ data }) => {
+        this.articles = data.articles
+      })
     }
   },
   head () {
@@ -121,5 +140,9 @@ export default {
 .link-type, .link-type:focus {
   color: #337ab7;
   cursor: pointer;
+}
+
+.el-pagination {
+  text-align: center;
 }
 </style>

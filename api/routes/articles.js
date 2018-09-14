@@ -3,34 +3,43 @@ const { Article } = require('../server')
 
 const router = Router()
 
-router.get('/articles', (req, res) => {
+router.get('/articles', async (req, res) => {
   const query = {
     status: 'published'
   }
-  const fields = ['title', 'date', 'views', 'tags']
+
   const options = {
-    sort: { date: -1 }
+    select: 'title date views tags',
+    sort: { date: -1 },
+    page: req.query.page
   }
 
   if (req.query.tag) query.tags = req.query.tag
 
-  Article.find(query, fields, options, (err, data) => {
+  Article.paginate(query, options, (err, { docs, total }) => {
     if (err) res.status(500).send(err)
 
-    res.send(data)
+    res.send({
+      articles: docs,
+      total
+    })
   })
 })
 
 router.get('/admin/articles', (req, res) => {
-  const fields = ['title', 'date', 'status', 'views']
   const options = {
-    sort: { date: -1 }
+    select: 'title date status views',
+    sort: { date: -1 },
+    page: req.query.page
   }
 
-  Article.find({}, fields, options, (err, data) => {
+  Article.paginate({}, options, (err, { docs, total }) => {
     if (err) res.status(500).send(err)
 
-    res.send(data)
+    res.send({
+      articles: docs,
+      total
+    })
   })
 })
 

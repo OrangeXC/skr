@@ -1,7 +1,7 @@
 <template>
   <section class="tag-wrap">
     <h2 class="title">标签：{{ $route.params.name }}</h2>
-    <articles :articles="articles"></articles>
+    <articles :initArticles="articles" :total="total"></articles>
   </section>
 </template>
 
@@ -14,8 +14,9 @@ export default {
       params: {
         tag: params.name
       }
-    }).then(res => ({
-      articles: res.data
+    }).then(({ data }) => ({
+      articles: data.articles,
+      total: data.total
     })).catch(err =>
       error({ statusCode: 404, message: 'Tag not found' })
     )
