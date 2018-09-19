@@ -4785,9 +4785,9 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-edge@^2.0.0-25619719.2dd2f2a:
-  version "2.0.0-25619719.2dd2f2a"
-  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25619719.2dd2f2a.tgz#452741f8d84a6dedf0b4bb65c2a0d33b6fe5246d"
+nuxt-edge@^2.0.0-25621471.65432e6:
+  version "2.0.0-25621471.65432e6"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.0.0-25621471.65432e6.tgz#4205f49e34e8ed6433215cab39a57bb726cfd423"
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/polyfill" "^7.0.0"
