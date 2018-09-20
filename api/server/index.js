@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const mongoosePaginate = require('mongoose-paginate')
+const consola = require('consola')
 const init = require('./init.json')
 
 const Schema = mongoose.Schema
@@ -43,8 +44,8 @@ const initialize = function () {
       console.log('Database opens for the first time...')
 
       Promise.all(init.map(item => new Models[item.type](item).save()))
-        .then(() => console.log('Initialize successfully.'))
-        .catch(() => console.log('Something went wrong during initializing.'))
+        .then(() => consola.success('Initialize successfully.'))
+        .catch(() => consola.error('Something went wrong during initializing.'))
     }
   })
 }
@@ -55,13 +56,13 @@ mongoose.connect('mongodb://127.0.0.1/skr', {
 
 const mongooseConnection = mongoose.connection
 
-mongooseConnection.on('error', function () {
-  console.log('Database connection error.')
+mongooseConnection.once('open', function () {
+  consola.success('The database has connected.')
+  initialize()
 })
 
-mongooseConnection.once('open', function () {
-  console.log('The database has connected.')
-  initialize()
+mongooseConnection.on('error', function () {
+  consola.error('Database connection error.')
 })
 
 Models.mongooseConnection = mongooseConnection
