@@ -722,7 +722,7 @@
 
 "@jimp/bmp@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fbmp/-/bmp-0.5.3.tgz#7f1a854dc47666072bbea285d61ff38941c2e38a"
+  resolved "https://registry.yarnpkg.com/@jimp%2fbmp/-/bmp-0.5.3.tgz#7f1a854dc47666072bbea285d61ff38941c2e38a"
   dependencies:
     "@jimp/utils" "^0.5.0"
     bmp-js "^0.1.0"
@@ -730,7 +730,7 @@
 
 "@jimp/core@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fcore/-/core-0.5.3.tgz#f55e045e96e116d20dd57f47c43e7387a8583ff7"
+  resolved "https://registry.yarnpkg.com/@jimp%2fcore/-/core-0.5.3.tgz#f55e045e96e116d20dd57f47c43e7387a8583ff7"
   dependencies:
     "@jimp/utils" "^0.5.0"
     any-base "^1.1.0"
@@ -746,14 +746,14 @@
 
 "@jimp/custom@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fcustom/-/custom-0.5.3.tgz#b932241e62d628bd465541efafaaddb0a720def6"
+  resolved "https://registry.yarnpkg.com/@jimp%2fcustom/-/custom-0.5.3.tgz#b932241e62d628bd465541efafaaddb0a720def6"
   dependencies:
     "@jimp/core" "^0.5.3"
     core-js "^2.5.7"
 
 "@jimp/gif@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fgif/-/gif-0.5.0.tgz#7543870b3d744c9758da76ca43fac4ee48fd6a00"
+  resolved "https://registry.yarnpkg.com/@jimp%2fgif/-/gif-0.5.0.tgz#7543870b3d744c9758da76ca43fac4ee48fd6a00"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
@@ -761,7 +761,7 @@
 
 "@jimp/jpeg@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fjpeg/-/jpeg-0.5.3.tgz#61ec088dddb7d2e1e0bb1108a7b1fbbe965f76f6"
+  resolved "https://registry.yarnpkg.com/@jimp%2fjpeg/-/jpeg-0.5.3.tgz#61ec088dddb7d2e1e0bb1108a7b1fbbe965f76f6"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
@@ -769,21 +769,21 @@
 
 "@jimp/plugin-blit@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-blit/-/plugin-blit-0.5.3.tgz#b65624ba54cbc2ca589fd702f9847910493ffd1e"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-blit/-/plugin-blit-0.5.3.tgz#b65624ba54cbc2ca589fd702f9847910493ffd1e"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-blur@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-blur/-/plugin-blur-0.5.0.tgz#c8222bdae8eb4cc86613c0adbcb26a92829739a2"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-blur/-/plugin-blur-0.5.0.tgz#c8222bdae8eb4cc86613c0adbcb26a92829739a2"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-color@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-color/-/plugin-color-0.5.3.tgz#cf1561ddd82554651a065437e617d4c97db8f110"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-color/-/plugin-color-0.5.3.tgz#cf1561ddd82554651a065437e617d4c97db8f110"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
@@ -791,77 +791,77 @@
 
 "@jimp/plugin-contain@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-contain/-/plugin-contain-0.5.3.tgz#b67c183e5f680bd3ace5d186f2933f670f9d830a"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-contain/-/plugin-contain-0.5.3.tgz#b67c183e5f680bd3ace5d186f2933f670f9d830a"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-cover@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-cover/-/plugin-cover-0.5.3.tgz#da6f2ead2bca8ac0ea618f3b82d6ecb4f776bbea"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-cover/-/plugin-cover-0.5.3.tgz#da6f2ead2bca8ac0ea618f3b82d6ecb4f776bbea"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-crop@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-crop/-/plugin-crop-0.5.3.tgz#30c5a06dc4ac3d4ecf0a38a44fe54d68f54a77c7"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-crop/-/plugin-crop-0.5.3.tgz#30c5a06dc4ac3d4ecf0a38a44fe54d68f54a77c7"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-displace@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-displace/-/plugin-displace-0.5.0.tgz#cb75d8588bdee45c1bdb1bec2323705d0e53d060"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-displace/-/plugin-displace-0.5.0.tgz#cb75d8588bdee45c1bdb1bec2323705d0e53d060"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-dither@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-dither/-/plugin-dither-0.5.0.tgz#0f1f6b7dcd5aba8f908bbd4b60685fc29cc6a3ed"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-dither/-/plugin-dither-0.5.0.tgz#0f1f6b7dcd5aba8f908bbd4b60685fc29cc6a3ed"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-flip@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-flip/-/plugin-flip-0.5.0.tgz#4a973c9c4bdc6dbcc7da66204a2bb2b12feb9381"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-flip/-/plugin-flip-0.5.0.tgz#4a973c9c4bdc6dbcc7da66204a2bb2b12feb9381"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-gaussian@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-gaussian/-/plugin-gaussian-0.5.0.tgz#02c9f07516108e01ba0f2938289b08e6e865c2c9"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-gaussian/-/plugin-gaussian-0.5.0.tgz#02c9f07516108e01ba0f2938289b08e6e865c2c9"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-invert@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-invert/-/plugin-invert-0.5.0.tgz#4496d2d67ab498c8fa3e89c4b6dd5892e7f14b9b"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-invert/-/plugin-invert-0.5.0.tgz#4496d2d67ab498c8fa3e89c4b6dd5892e7f14b9b"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-mask@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-mask/-/plugin-mask-0.5.3.tgz#fde86357255c58db0ca4094ea2a8506ea6b33fe9"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-mask/-/plugin-mask-0.5.3.tgz#fde86357255c58db0ca4094ea2a8506ea6b33fe9"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-normalize@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-normalize/-/plugin-normalize-0.5.3.tgz#d5470c87bba17807ab5847ddc8b3e2e044899218"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-normalize/-/plugin-normalize-0.5.3.tgz#d5470c87bba17807ab5847ddc8b3e2e044899218"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-print@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-print/-/plugin-print-0.5.3.tgz#1ee6fca1bd67cc1675e23ea6e04ec636b5937247"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-print/-/plugin-print-0.5.3.tgz#1ee6fca1bd67cc1675e23ea6e04ec636b5937247"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
@@ -869,28 +869,28 @@
 
 "@jimp/plugin-resize@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-resize/-/plugin-resize-0.5.3.tgz#970c796469f6af9fb4d887c1e05d30e03d3a9529"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-resize/-/plugin-resize-0.5.3.tgz#970c796469f6af9fb4d887c1e05d30e03d3a9529"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-rotate@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-rotate/-/plugin-rotate-0.5.3.tgz#193af131c045e194c11ce24e77dd6cb0d9b50757"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-rotate/-/plugin-rotate-0.5.3.tgz#193af131c045e194c11ce24e77dd6cb0d9b50757"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugin-scale@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugin-scale/-/plugin-scale-0.5.0.tgz#095f937e5a4887481b3074f5cd6a144d8f4f815e"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugin-scale/-/plugin-scale-0.5.0.tgz#095f937e5a4887481b3074f5cd6a144d8f4f815e"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
 
 "@jimp/plugins@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fplugins/-/plugins-0.5.3.tgz#c9a5000c1d7051c715683c1c8ed61a290a75bc97"
+  resolved "https://registry.yarnpkg.com/@jimp%2fplugins/-/plugins-0.5.3.tgz#c9a5000c1d7051c715683c1c8ed61a290a75bc97"
   dependencies:
     "@jimp/plugin-blit" "^0.5.3"
     "@jimp/plugin-blur" "^0.5.0"
@@ -914,7 +914,7 @@
 
 "@jimp/png@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2fpng/-/png-0.5.3.tgz#a3c46e556525070daf760dfc389ac01a9b3faa50"
+  resolved "https://registry.yarnpkg.com/@jimp%2fpng/-/png-0.5.3.tgz#a3c46e556525070daf760dfc389ac01a9b3faa50"
   dependencies:
     "@jimp/utils" "^0.5.0"
     core-js "^2.5.7"
@@ -922,14 +922,14 @@
 
 "@jimp/tiff@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2ftiff/-/tiff-0.5.3.tgz#e3c1677a166a19e1adeab1a86129dffe9f9254c6"
+  resolved "https://registry.yarnpkg.com/@jimp%2ftiff/-/tiff-0.5.3.tgz#e3c1677a166a19e1adeab1a86129dffe9f9254c6"
   dependencies:
     core-js "^2.5.7"
     utif "^2.0.1"
 
 "@jimp/types@^0.5.3":
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/@jimp%2ftypes/-/types-0.5.3.tgz#bd3b2a9cf26e0b59a94a882bfd4b4f767592bd95"
+  resolved "https://registry.yarnpkg.com/@jimp%2ftypes/-/types-0.5.3.tgz#bd3b2a9cf26e0b59a94a882bfd4b4f767592bd95"
   dependencies:
     "@jimp/bmp" "^0.5.3"
     "@jimp/gif" "^0.5.0"
@@ -941,13 +941,13 @@
 
 "@jimp/utils@^0.5.0":
   version "0.5.0"
-  resolved "http://npm.zhaopin.com/@jimp%2futils/-/utils-0.5.0.tgz#ecb33259c75238053d6c7706a3e91f657dbabf91"
+  resolved "https://registry.yarnpkg.com/@jimp%2futils/-/utils-0.5.0.tgz#ecb33259c75238053d6c7706a3e91f657dbabf91"
   dependencies:
     core-js "^2.5.7"
 
 "@nuxtjs/axios@^5.3.2":
   version "5.3.2"
-  resolved "http://npm.zhaopin.com/@nuxtjs%2faxios/-/axios-5.3.2.tgz#0b04141f3177ccc83e71ee00b7c57c0d06a38290"
+  resolved "https://registry.yarnpkg.com/@nuxtjs%2faxios/-/axios-5.3.2.tgz#0b04141f3177ccc83e71ee00b7c57c0d06a38290"
   dependencies:
     "@nuxtjs/proxy" "^1.2.4"
     axios "^0.18.0"
@@ -980,7 +980,7 @@
 
 "@nuxtjs/icon@^2.6.0":
   version "2.6.0"
-  resolved "http://npm.zhaopin.com/@nuxtjs%2ficon/-/icon-2.6.0.tgz#65295ee059794f01e41a52c4141c06e898e798bc"
+  resolved "https://registry.yarnpkg.com/@nuxtjs%2ficon/-/icon-2.6.0.tgz#65295ee059794f01e41a52c4141c06e898e798bc"
   dependencies:
     fs-extra "^7.0.0"
     hash-sum "^1.0.2"
@@ -988,7 +988,7 @@
 
 "@nuxtjs/manifest@^2.6.0":
   version "2.6.0"
-  resolved "http://npm.zhaopin.com/@nuxtjs%2fmanifest/-/manifest-2.6.0.tgz#eb2ffdf9335a882c08b259578c346cee72920077"
+  resolved "https://registry.yarnpkg.com/@nuxtjs%2fmanifest/-/manifest-2.6.0.tgz#eb2ffdf9335a882c08b259578c346cee72920077"
   dependencies:
     hash-sum "^1.0.2"
 
@@ -1002,7 +1002,7 @@
 
 "@nuxtjs/meta@^2.6.0":
   version "2.6.0"
-  resolved "http://npm.zhaopin.com/@nuxtjs%2fmeta/-/meta-2.6.0.tgz#cc8fd2a019fb3e2e1feaa78abefee3a6a6aed477"
+  resolved "https://registry.yarnpkg.com/@nuxtjs%2fmeta/-/meta-2.6.0.tgz#cc8fd2a019fb3e2e1feaa78abefee3a6a6aed477"
 
 "@nuxtjs/opencollective@^0.1.0":
   version "0.1.0"
@@ -1022,7 +1022,7 @@
 
 "@nuxtjs/pwa@^2.6.0":
   version "2.6.0"
-  resolved "http://npm.zhaopin.com/@nuxtjs%2fpwa/-/pwa-2.6.0.tgz#3138e1f32f4d080ccbe96dc0b206efea4e790199"
+  resolved "https://registry.yarnpkg.com/@nuxtjs%2fpwa/-/pwa-2.6.0.tgz#3138e1f32f4d080ccbe96dc0b206efea4e790199"
   dependencies:
     "@nuxtjs/icon" "^2.6.0"
     "@nuxtjs/manifest" "^2.6.0"
@@ -1031,7 +1031,7 @@
 
 "@nuxtjs/workbox@^2.6.0":
   version "2.6.0"
-  resolved "http://npm.zhaopin.com/@nuxtjs%2fworkbox/-/workbox-2.6.0.tgz#eb057e7cbddc8f50bc181a5af9795cc93bd774d8"
+  resolved "https://registry.yarnpkg.com/@nuxtjs%2fworkbox/-/workbox-2.6.0.tgz#eb057e7cbddc8f50bc181a5af9795cc93bd774d8"
   dependencies:
     lodash "^4.17.11"
     workbox-build "^3.4.1"
@@ -1449,7 +1449,7 @@ aws4@^1.6.0, aws4@^1.8.0:
 
 axios-retry@^3.1.1:
   version "3.1.1"
-  resolved "http://npm.zhaopin.com/axios-retry/-/axios-retry-3.1.1.tgz#88d2971f671a9023b21d887c5dcac6c54f332cde"
+  resolved "https://registry.yarnpkg.com/axios-retry/-/axios-retry-3.1.1.tgz#88d2971f671a9023b21d887c5dcac6c54f332cde"
   dependencies:
     is-retry-allowed "^1.1.0"
 
@@ -1468,6 +1468,17 @@ babel-code-frame@^6.26.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
+babel-eslint@^10.0.0:
+  version "10.0.0"
+  resolved "http://npm.zhaopin.com/babel-eslint/-/babel-eslint-10.0.0.tgz#0bb43e6b11a119bf3defbb1ee2521f42e2d413c9"
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    "@babel/parser" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
+    "@babel/types" "^7.0.0"
+    eslint-scope "3.7.1"
+    eslint-visitor-keys "^1.0.0"
+
 babel-eslint@^8.2.3:
   version "8.2.6"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.6.tgz#6270d0c73205628067c0f7ae1693a9e797acefd9"
@@ -1476,17 +1487,6 @@ babel-eslint@^8.2.3:
     "@babel/traverse" "7.0.0-beta.44"
     "@babel/types" "7.0.0-beta.44"
     babylon "7.0.0-beta.44"
-    eslint-scope "3.7.1"
-    eslint-visitor-keys "^1.0.0"
-
-babel-eslint@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-9.0.0.tgz#7d9445f81ed9f60aff38115f838970df9f2b6220"
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    "@babel/parser" "^7.0.0"
-    "@babel/traverse" "^7.0.0"
-    "@babel/types" "^7.0.0"
     eslint-scope "3.7.1"
     eslint-visitor-keys "^1.0.0"
 
@@ -1585,7 +1585,7 @@ bluebird@3.5.1, bluebird@^3.1.1, bluebird@^3.5.1:
 
 bmp-js@^0.1.0:
   version "0.1.0"
-  resolved "http://npm.zhaopin.com/bmp-js/-/bmp-js-0.1.0.tgz#e05a63f796a6c1ff25f4771ec7adadc148c07233"
+  resolved "https://registry.yarnpkg.com/bmp-js/-/bmp-js-0.1.0.tgz#e05a63f796a6c1ff25f4771ec7adadc148c07233"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
@@ -2878,7 +2878,7 @@ eslint-plugin-es@^1.3.1:
 
 eslint-plugin-html@^4.0.6:
   version "4.0.6"
-  resolved "http://npm.zhaopin.com/eslint-plugin-html/-/eslint-plugin-html-4.0.6.tgz#724bb9272efb4df007dfee8dfb269ed83577e5b4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-html/-/eslint-plugin-html-4.0.6.tgz#724bb9272efb4df007dfee8dfb269ed83577e5b4"
   dependencies:
     htmlparser2 "^3.8.2"
 
@@ -4122,7 +4122,7 @@ isstream@~0.1.2:
 
 jimp@^0.5.0:
   version "0.5.3"
-  resolved "http://npm.zhaopin.com/jimp/-/jimp-0.5.3.tgz#6f411ee4eb459686f6f8e11a31faa08c6dfac922"
+  resolved "https://registry.yarnpkg.com/jimp/-/jimp-0.5.3.tgz#6f411ee4eb459686f6f8e11a31faa08c6dfac922"
   dependencies:
     "@babel/polyfill" "^7.0.0"
     "@jimp/custom" "^0.5.3"
@@ -4296,7 +4296,7 @@ linkify-it@^2.0.0:
 
 load-bmfont@^1.3.1, load-bmfont@^1.4.0:
   version "1.4.0"
-  resolved "http://npm.zhaopin.com/load-bmfont/-/load-bmfont-1.4.0.tgz#75f17070b14a8c785fe7f5bee2e6fd4f98093b6b"
+  resolved "https://registry.yarnpkg.com/load-bmfont/-/load-bmfont-1.4.0.tgz#75f17070b14a8c785fe7f5bee2e6fd4f98093b6b"
   dependencies:
     buffer-equal "0.0.1"
     mime "^1.3.4"
@@ -4752,7 +4752,7 @@ mongoose-paginate@^5.0.3:
 
 mongoose@^5.2.17:
   version "5.2.17"
-  resolved "http://npm.zhaopin.com/mongoose/-/mongoose-5.2.17.tgz#8baeb60a675d00da03633d679a72457dbb5b2285"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.2.17.tgz#8baeb60a675d00da03633d679a72457dbb5b2285"
   dependencies:
     async "2.6.1"
     bson "~1.0.5"
@@ -5029,7 +5029,7 @@ number-is-nan@^1.0.0:
 
 nuxt@^2.0.0:
   version "2.0.0"
-  resolved "http://npm.zhaopin.com/nuxt/-/nuxt-2.0.0.tgz#1fbe9dc446ed156cada77212926930c52f1efeae"
+  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-2.0.0.tgz#1fbe9dc446ed156cada77212926930c52f1efeae"
   dependencies:
     "@babel/core" "^7.1.0"
     "@babel/polyfill" "^7.0.0"
@@ -7175,7 +7175,7 @@ timers-browserify@^2.0.4:
 
 timm@^1.6.1:
   version "1.6.1"
-  resolved "http://npm.zhaopin.com/timm/-/timm-1.6.1.tgz#5f8aafc932248c76caf2c6af60542a32d3c30701"
+  resolved "https://registry.yarnpkg.com/timm/-/timm-1.6.1.tgz#5f8aafc932248c76caf2c6af60542a32d3c30701"
 
 timsort@^0.3.0:
   version "0.3.0"
@@ -7448,7 +7448,7 @@ use@^3.1.0:
 
 utif@^2.0.1:
   version "2.0.1"
-  resolved "http://npm.zhaopin.com/utif/-/utif-2.0.1.tgz#9e1582d9bbd20011a6588548ed3266298e711759"
+  resolved "https://registry.yarnpkg.com/utif/-/utif-2.0.1.tgz#9e1582d9bbd20011a6588548ed3266298e711759"
   dependencies:
     pako "^1.0.5"
 
