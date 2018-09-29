@@ -1025,10 +1025,10 @@
   dependencies:
     core-js "^2.5.7"
 
-"@nuxtjs/axios@^5.3.2":
-  version "5.3.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.2.tgz#0b04141f3177ccc83e71ee00b7c57c0d06a38290"
-  integrity sha512-+qJaGPD7ROJH0zBiwzIkaOrr3neQtvWB01FrdmUZAPSHfmtLcHUfo58nP9MuZOhTtiqoP2yZuVdSrFA0QOtxEg==
+"@nuxtjs/axios@^5.3.3":
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.3.3.tgz#0b09604e4c5e4b3ef1b5baac507e34ee25a3f82d"
+  integrity sha512-GdbMc1Vv2RBXxTZRO/dKkyNadEpp/P6riFd4OJJtfX2FIXaUuoh1PbTMTDbE2cyr/anUMt1H9UnlkkEol+nuNA==
   dependencies:
     "@nuxtjs/proxy" "^1.2.4"
     axios "^0.18.0"
@@ -3317,16 +3317,16 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^5.6.0:
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.6.0.tgz#b6f7806041af01f71b3f1895cbb20971ea4b6223"
-  integrity sha512-/eVYs9VVVboX286mBK7bbKnO1yamUy2UCRjiY6MryhQL2PaaXCExsCQ2aO83OeYRhU2eCU/FMFP+tVMoOrzNrA==
+eslint@^5.6.1:
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.6.1.tgz#348134e32ccc09abb2df1bf282b3f6eed8c7b480"
+  integrity sha512-hgrDtGWz368b7Wqf+v1Z69O3ZebNR0+GA7PtDdbmuz4rInFVUV9uw7whjZEiWyLzCjVb5Rs5WRN1TAS6eo7AYA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.5.3"
     chalk "^2.1.0"
     cross-spawn "^6.0.5"
-    debug "^3.1.0"
+    debug "^4.0.1"
     doctrine "^2.1.0"
     eslint-scope "^4.0.0"
     eslint-utils "^1.3.1"
@@ -4820,10 +4820,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-kareem@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.2.1.tgz#9950809415aa3cde62ab43b4f7b919d99816e015"
-  integrity sha512-xpDFy8OxkFM+vK6pXy6JmH92ibeEFUuDWzas5M9L7MzVmHW3jzwAHxodCPV/BYkf4A31bVDLyonrMfp9RXb/oA==
+kareem@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.3.0.tgz#ef33c42e9024dce511eeaf440cd684f3af1fc769"
+  integrity sha512-6hHxsp9e6zQU8nXsP+02HGWXwTkOEw6IROhF2ZA28cYbUk4eJ6QbtZvdqZOdD9YPKghG3apk5eOCvs+tLl3lRg==
 
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
@@ -5413,14 +5413,14 @@ mongoose-paginate@^5.0.3:
   dependencies:
     bluebird "3.0.5"
 
-mongoose@^5.2.18:
-  version "5.2.18"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.2.18.tgz#d2dab8c5ed04dbe7916bf758b52f5ccd9db32c1c"
-  integrity sha512-w07HKW7AxoN0/uopbZzXCFWehOr0h6o4g3F9HUmK4+EFDDI+JDDmCD/UkEtIbd48DWRkFaRS/7s1xA1PjdpUWw==
+mongoose@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.3.0.tgz#5deadc5351cbf751c0af2d34f777fa9115a4a225"
+  integrity sha512-flRnA3CBkngBSPg2v0eYKPPwduE448PmicUk15DCxNjY1FoFD241Ntfa97oyvRm0APfj7i2ppz9zuMbXOrZMzg==
   dependencies:
     async "2.6.1"
     bson "~1.0.5"
-    kareem "2.2.1"
+    kareem "2.3.0"
     lodash.get "4.4.2"
     mongodb "3.1.6"
     mongodb-core "3.1.5"
