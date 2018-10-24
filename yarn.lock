@@ -5547,10 +5547,10 @@ mongoose-paginate@^5.0.3:
   dependencies:
     bluebird "3.0.5"
 
-mongoose@^5.3.5:
-  version "5.3.5"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.3.5.tgz#128b5bf302af70f42887de35caca564c60e7a391"
-  integrity sha512-4HT3uo4pAy0SnoFW6zfPzu7IQnXmCo/LraTlDnqcD5iJQAK5WkWDnv0i5oBEikfS5EEJEvJJPikmhZqNFmjLQg==
+mongoose@^5.3.6:
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.3.6.tgz#383532b5c5a75eddb078fc78c7ff64f345d8bb1b"
+  integrity sha512-EuHmtc7T6dIaHANd/A6J7dSSRhw9LVWdiGcmFYzOCdIYWwbrc1k5klN8U57KKeJUPvfhgVCmm6p5L5VueVpSjw==
   dependencies:
     async "2.6.1"
     bson "~1.0.5"
