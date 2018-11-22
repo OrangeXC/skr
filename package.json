@@ -18,7 +18,7 @@
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.2",
     "cross-env": "^5.2.0",
-    "element-ui": "^2.4.10",
+    "element-ui": "^2.4.11",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "mavon-editor": "^2.6.17",
