@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/pwa": "^2.6.0",
     "body-parser": "^1.18.3",
-    "connect-mongo": "^2.0.2",
+    "connect-mongo": "^2.0.3",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
     "express": "^4.16.4",
