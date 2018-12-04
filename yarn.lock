@@ -2659,10 +2659,10 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-connect-mongo@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/connect-mongo/-/connect-mongo-2.0.2.tgz#f3a78acd35ce928969cdb241705b2dcdc9ced7d0"
-  integrity sha512-kc88c3EeQAdS9z/dJb5iHTN/EwHTPjN66YhoXJCyWS4rLGyWbpPyGWlfaJ00Ny3aD34i4Z9RSXV2ARRnkyB8cQ==
+connect-mongo@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/connect-mongo/-/connect-mongo-2.0.3.tgz#db6cabe1e3add5acc9ef9c486681027675a58ee5"
+  integrity sha512-Vs+QZ/6X6gbCrP1Ls7Oh/wlyY6pgpbPSrUKF5yRT+zd+4GZPNbjNquxquZ+Clv2+03HBXE7T4lVM0PUcaBhihg==
   dependencies:
     mongodb "^2.0.36"
 
