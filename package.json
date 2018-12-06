@@ -22,7 +22,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "mavon-editor": "^2.6.17",
-    "mongoose": "^5.3.14",
+    "mongoose": "^5.3.15",
     "mongoose-paginate": "^5.0.3",
     "nuxt": "^2.3.4",
     "sortablejs": "^1.7.0",
