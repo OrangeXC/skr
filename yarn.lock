@@ -5866,10 +5866,10 @@ mongoose-paginate@^5.0.3:
   dependencies:
     bluebird "3.0.5"
 
-mongoose@^5.4.3:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.3.tgz#9cbc689ca0c529c2d7dd5a84dcfbc9b041084367"
-  integrity sha512-zhfypQm63CPYHi43O/3lTcEPVucY3h6CqONbzreMKZIEXtwgkB9HCm4wn441Z9/CpM94G6/NA3wcaRb0N2kPYQ==
+mongoose@^5.4.4:
+  version "5.4.4"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.4.tgz#923923cd39a03b970c269f828322990ea163f9a8"
+  integrity sha512-KoYUFtgrXQ9Sxuf5IEE0Y2LswWGhHiN27bxtObANxMgXbuNLTtLB3xaep8jITUDitG4kkI+FKElUJH4uY8G2Bw==
   dependencies:
     async "2.6.1"
     bson "~1.1.0"
@@ -8223,10 +8223,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-sortablejs@^1.8.0-rc1:
-  version "1.8.0-rc1"
-  resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.8.0-rc1.tgz#fe4731b2cb3ccb4730a26a8cdde2f74a634bb259"
-  integrity sha512-umyNbQVDwRgc0SZvUB+FRUIUqACnu5vCCmK0zv/xWA3eDSOh+IZsg3GHdWvEOcUBwnykqyk760+YPgVa8HfxFg==
+sortablejs@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/sortablejs/-/sortablejs-1.8.1.tgz#d19b66cf10aab9521a565b79766f2f3291c18278"
+  integrity sha512-r0bKxZYGUFgv/6DQSWW8TVJBBtupUn6TPnDABd4rlqNq+u94ct5+barZmYauPAQNCKwy56C1kg9Y9msAN7UPag==
 
 source-list-map@^2.0.0:
   version "2.0.0"
