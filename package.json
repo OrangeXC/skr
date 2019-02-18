@@ -14,7 +14,7 @@
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-beta.6",
+    "@nuxtjs/pwa": "^3.0.0-beta.7",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.3",
     "cross-env": "^5.2.0",
