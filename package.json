@@ -14,11 +14,11 @@
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/pwa": "^3.0.0-beta.8",
+    "@nuxtjs/pwa": "^3.0.0-beta.10",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.3",
     "cross-env": "^5.2.0",
-    "element-ui": "^2.5.4",
+    "element-ui": "^2.6.0",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "mavon-editor": "^2.6.17",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "babel-plugin-component": "^1.1.1",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-html": "^5.0.3",
     "eslint-plugin-import": "^2.16.0",
