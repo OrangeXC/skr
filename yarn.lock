@@ -1383,32 +1383,32 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^3.1.5"
 
-"@nuxtjs/axios@^5.4.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.4.0.tgz#4f970f9d62e93472e6d6c6763af5caf5722a4c96"
-  integrity sha512-peqA0edbRYWxgJSAk5MwsSVZjxS3VuoiHHS2kAoAxkoXTj2vgtF/X8DkGAnfr/AP3e4QNvhVktV1V3Z1b4nz2g==
+"@nuxtjs/axios@^5.4.1":
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/axios/-/axios-5.4.1.tgz#8dbc841e939c082271f7053edc1180bf5a441ee3"
+  integrity sha512-SvN6Ixs9d2AHdaB8PF4ZXr9azg4r3ynaomtr71+wMox3EEFfZHBQmAFz6lOY/CqbLRlJqYVDPKPvfIcSnngktw==
   dependencies:
     "@nuxtjs/proxy" "^1.3.3"
     axios "^0.18.0"
     axios-retry "^3.1.2"
     consola "^2.5.6"
 
-"@nuxtjs/icon@3.0.0-beta.10":
-  version "3.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-3.0.0-beta.10.tgz#822cefa686ff72574188775594de6cd062f6e632"
-  integrity sha512-XEUfDv4GWhAl+3We3ZUu5GE3KA6LiRG+9rEvifFmBF6y8MRzJgQnFYRzm85cluU3N68aepGjUfX3fAV9R4rTew==
+"@nuxtjs/icon@3.0.0-beta.12":
+  version "3.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-3.0.0-beta.12.tgz#d7b48ae646ced69b4b678123f7fb237f8035e9a4"
+  integrity sha512-f7nwKg+jPlyi8JyXwGNflZK2LYOwK1FkjySTGtE14eBk02MalTBD0fqv5KCcJjtCaeaNiiraJSOJ2qGhVsOIcQ==
   dependencies:
-    "@nuxtjs/pwa-utils" "3.0.0-beta.10"
+    "@nuxtjs/pwa-utils" "3.0.0-beta.12"
     fs-extra "^7.0.1"
     hash-sum "^1.0.2"
     jimp "^0.6.0"
 
-"@nuxtjs/manifest@3.0.0-beta.10":
-  version "3.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-3.0.0-beta.10.tgz#d79d876a7c3bdecd477ed147f4030e813b3a286c"
-  integrity sha512-L5D1kxfGbdaLIYLSWNDT4eVarbo9gp7hcAks4FU3XfLDuTJ1tLLMGHoB5wqyLkDUykvaKmh0/rL+FNHTDjt1uA==
+"@nuxtjs/manifest@3.0.0-beta.12":
+  version "3.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/manifest/-/manifest-3.0.0-beta.12.tgz#d3218494edcc35d825a20a2f0b4602c95c70007e"
+  integrity sha512-qQw0f7cUwZ9GvBPmwWKdDwX1/oscmD/5Of8cn1y8ogNacFGBO7vSYmwS78lCjBom9MCw9myt53SxhdQ8QLigRA==
   dependencies:
-    "@nuxtjs/pwa-utils" "3.0.0-beta.10"
+    "@nuxtjs/pwa-utils" "3.0.0-beta.12"
     hash-sum "^1.0.2"
 
 "@nuxtjs/markdownit-loader@^1.1.1":
@@ -1420,12 +1420,12 @@
     loader-utils "^1.1.0"
     markdown-it "^8.3.1"
 
-"@nuxtjs/meta@3.0.0-beta.10":
-  version "3.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-3.0.0-beta.10.tgz#61a136d7908abb4c8685bcc65cc329860579bdf2"
-  integrity sha512-cBDuVPr938ScJrgWVxDKmObdSPhrU2tqhpVBy8KjBFPEKMaZ9cfFBzAocGjr3puSPIWlF5DuUiE7RHYtniD51w==
+"@nuxtjs/meta@3.0.0-beta.12":
+  version "3.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-3.0.0-beta.12.tgz#990a960958d54131d7616669c85a33e80e7bb2a0"
+  integrity sha512-mCHjAzL6feQ1dAr7LjxWBmCjNtSFPHIi2Ym4k0MLD97e5cTUC6zTICizQG5pTxTim6lmSXPtzsHFSURgglVVdg==
   dependencies:
-    "@nuxtjs/pwa-utils" "3.0.0-beta.10"
+    "@nuxtjs/pwa-utils" "3.0.0-beta.12"
 
 "@nuxtjs/proxy@^1.3.3":
   version "1.3.3"
@@ -1435,28 +1435,29 @@
     consola "^2.5.6"
     http-proxy-middleware "^0.19.1"
 
-"@nuxtjs/pwa-utils@3.0.0-beta.10":
-  version "3.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa-utils/-/pwa-utils-3.0.0-beta.10.tgz#2411618bb98e8e210eaaffef054e0c2123075fd4"
-  integrity sha512-edcOHLJzFpxcpvUVkc6NYyOMl9pTxxvz8tDHxsNN7o+nokKUukNhEAR1oeGcCnC7rzWcykHL4GUxjJO0x3AnWA==
+"@nuxtjs/pwa-utils@3.0.0-beta.12":
+  version "3.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa-utils/-/pwa-utils-3.0.0-beta.12.tgz#8a60387794e91b6a00b2b91e759c70b8991ab954"
+  integrity sha512-5el8TX6kps2YBMqfcKTePikDFjUaRIRTvG+WxD5HzGRwShAAbbXphuanasr9VjtxXfkCVIG0v4mqrZ2Wv91fUA==
 
-"@nuxtjs/pwa@^3.0.0-beta.10":
-  version "3.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.0.0-beta.10.tgz#859861570a4b8fe1f39aab1c9ba8ac1bb41ce82c"
-  integrity sha512-WIYqZZ36dCSIiM+e4GNQID0ToAbVNUKkXO+emoQrJYuxKPn4Ug5mD1Ljd2WRJxJBALkjXWAT+E8Dgd3iPlFAPA==
+"@nuxtjs/pwa@^3.0.0-beta.12":
+  version "3.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.0.0-beta.12.tgz#2ea55137f896687bc265e26d6dedbfd125e130c0"
+  integrity sha512-ex37k5A0nWRK6CiL1J6VzZEk4THjWuQopCv097Aif6ylKS5OytvJUOZDAgLLuTTm+D4zp9F411TYtqA4mJ4bUw==
   dependencies:
-    "@nuxtjs/icon" "3.0.0-beta.10"
-    "@nuxtjs/manifest" "3.0.0-beta.10"
-    "@nuxtjs/meta" "3.0.0-beta.10"
-    "@nuxtjs/pwa-utils" "3.0.0-beta.10"
-    "@nuxtjs/workbox" "3.0.0-beta.10"
+    "@nuxtjs/icon" "3.0.0-beta.12"
+    "@nuxtjs/manifest" "3.0.0-beta.12"
+    "@nuxtjs/meta" "3.0.0-beta.12"
+    "@nuxtjs/pwa-utils" "3.0.0-beta.12"
+    "@nuxtjs/workbox" "3.0.0-beta.12"
 
-"@nuxtjs/workbox@3.0.0-beta.10":
-  version "3.0.0-beta.10"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-3.0.0-beta.10.tgz#999bfbd8f9b37fa82e5996feed13ea0f8befd9c8"
-  integrity sha512-FDYedg9kI7xjyvoPDE+6t0TjcisTcKgbNpQkpu7qwU8sewQE3cul2sg9Sa/3qrjOAoxvbvON373YTZN1jT5zkQ==
+"@nuxtjs/workbox@3.0.0-beta.12":
+  version "3.0.0-beta.12"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/workbox/-/workbox-3.0.0-beta.12.tgz#004d9e2070f1242246f77ec920f2112b8c5c2ddc"
+  integrity sha512-HDI4VRT8x3T14SMCbeATS2ugOfb5AYF0EyX8BJO4lYlIYM3HA5D2EwOlxeKeTruUJBckrh1w+Jp1bgepBv45nQ==
   dependencies:
-    "@nuxtjs/pwa-utils" "3.0.0-beta.10"
+    "@nuxtjs/pwa-utils" "3.0.0-beta.12"
+    workbox-window "4.0.0"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -6070,10 +6071,10 @@ mongoose-paginate@^5.0.3:
   dependencies:
     bluebird "3.0.5"
 
-mongoose@^5.4.17:
-  version "5.4.17"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.17.tgz#354c4fef04ea7a3d10ddbd0dd9cb4a40d9d135b8"
-  integrity sha512-9aAg8M0YUmGHQRDYvsKJ02wx/Qaof1Jn2iDH21ZtWGAZpQt9uVLNEOdcBuzi+lPJwGbLYh2dphdKX0sZ+dXAJQ==
+mongoose@^5.4.18:
+  version "5.4.18"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.18.tgz#ed74e152600f7c911f8b9d61b51560f9635b2dfe"
+  integrity sha512-yiSd/1OYYfK9EuH6NFO/NnTD4AZPIpRY1i58xUssgCGsYDX3qEYcdgFeknB5OArMB1Ny3wwMW8xiip2I5pgszw==
   dependencies:
     async "2.6.1"
     bson "~1.1.0"
@@ -9629,6 +9630,18 @@ wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
   integrity sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=
+
+workbox-core@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-4.1.0.tgz#395d89a36a95887073b5682f9f6920e96bd53331"
+  integrity sha512-YgLs4EUSmpib3aOt7pa5055VsapQzzBEXik800Ez+h9CUohZzDTBRCL0uWJL+rm2ilcFWk/W9Y1gDeCmel9ULQ==
+
+workbox-window@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/workbox-window/-/workbox-window-4.0.0.tgz#a4d6404c96cc65d4882f79331d4e812c10f912a6"
+  integrity sha512-gdLzP/L0vu5Gi3pdUYtVNmg0yE7OriEuYZBoLt8AYoILXh6cta9WsWHKQ0/pXfmEmZywr4Dfu0qkLLvc9VlZGQ==
+  dependencies:
+    workbox-core "^4.0.0"
 
 worker-farm@^1.5.2:
   version "1.6.0"
