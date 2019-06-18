@@ -16,7 +16,7 @@
     "@nuxtjs/axios": "^5.5.4",
     "@nuxtjs/pwa": "^3.0.0-beta.12",
     "body-parser": "^1.19.0",
-    "connect-mongo": "^2.0.3",
+    "connect-mongo": "^3.0.0",
     "cross-env": "^5.2.0",
     "element-ui": "^2.9.1",
     "express": "^4.17.1",
@@ -30,7 +30,7 @@
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^10.0.2",
     "babel-plugin-component": "^1.1.1",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
