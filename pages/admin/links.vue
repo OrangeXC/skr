@@ -1,41 +1,72 @@
 <template>
   <section>
     <el-table
+      v-loading.body="listLoading"
       :data="links"
       row-key="_id"
-      v-loading.body="listLoading"
       border
       fit
       highlight-current-row
       style="width: 100%"
     >
-      <el-table-column width="200px" label="链接名称">
+      <el-table-column
+        width="200px"
+        label="链接名称"
+      >
         <template slot-scope="scope">
-          <el-input v-model="scope.row.name"></el-input>
+          <el-input v-model="scope.row.name" />
         </template>
       </el-table-column>
 
-      <el-table-column min-width="300px" label="链接地址">
+      <el-table-column
+        min-width="300px"
+        label="链接地址"
+      >
         <template slot-scope="scope">
-          <el-input v-model="scope.row.href"></el-input>
+          <el-input v-model="scope.row.href" />
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="拖拽" width="60">
-        <template slot-scope="scope">
-          <i class="el-icon-rank"></i>
+      <el-table-column
+        align="center"
+        label="拖拽"
+        width="60"
+      >
+        <template>
+          <i class="el-icon-rank" />
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="操作" width="100">
+      <el-table-column
+        align="center"
+        label="操作"
+        width="100"
+      >
         <template slot-scope="scope">
-          <el-button icon="el-icon-delete" size="small" type="danger" @click="remove(scope.$index)">删除</el-button>
+          <el-button
+            icon="el-icon-delete"
+            size="small"
+            type="danger"
+            @click="remove(scope.$index)"
+          >
+            删除
+          </el-button>
         </template>
       </el-table-column>
     </el-table>
     <p class="action-bar">
-      <el-button @click="add" :disabled="links.length > 4">新增链接</el-button>
-      <el-button type="primary" @click="submit">保存</el-button>
+      <el-button
+        :disabled="links.length > 4"
+        @click="add"
+      >
+        新增链接
+      </el-button>
+      <el-button
+        type="primary"
+        @click="submit"
+      >
+        保存
+      </el-button>
     </p>
   </section>
 </template>
@@ -44,17 +75,17 @@
 import Sortable from 'sortablejs'
 
 export default {
-  async asyncData ({ app }) {
-    let { data } = await app.$axios.get('/api/links')
-
-    return {
-      links: data
-    }
-  },
   data () {
     return {
       listLoading: false,
       sortable: null
+    }
+  },
+  async asyncData ({ app }) {
+    const { data } = await app.$axios.get('/api/links')
+
+    return {
+      links: data
     }
   },
   mounted () {

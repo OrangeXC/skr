@@ -11,22 +11,26 @@
       >
         <el-submenu index="article">
           <template slot="title">
-            <i class="el-icon-document"></i>
+            <i class="el-icon-document" />
             <span>文章</span>
           </template>
-          <el-menu-item index="/admin/articles/new">新建文章</el-menu-item>
-          <el-menu-item index="/admin">文章列表</el-menu-item>
+          <el-menu-item index="/admin/articles/new">
+            新建文章
+          </el-menu-item>
+          <el-menu-item index="/admin">
+            文章列表
+          </el-menu-item>
         </el-submenu>
         <el-menu-item index="/admin/tags">
-          <i class="el-icon-star-off"></i>
+          <i class="el-icon-star-off" />
           <span>标签</span>
         </el-menu-item>
         <el-menu-item index="/admin/links">
-          <i class="el-icon-menu"></i>
+          <i class="el-icon-menu" />
           <span>链接</span>
         </el-menu-item>
         <el-menu-item index="/admin/password">
-          <i class="el-icon-setting"></i>
+          <i class="el-icon-setting" />
           <span>修改密码</span>
         </el-menu-item>
       </el-menu>
@@ -44,7 +48,7 @@
       </el-header>
 
       <el-main>
-        <nuxt/>
+        <nuxt />
       </el-main>
     </el-container>
   </el-container>

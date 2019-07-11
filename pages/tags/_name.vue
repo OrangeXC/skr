@@ -1,7 +1,12 @@
 <template>
   <section class="tag-wrap">
-    <h2 class="title">标签：{{ $route.params.name }}</h2>
-    <articles :initArticles="articles" :total="total"></articles>
+    <h2 class="title">
+      标签：{{ $route.params.name }}
+    </h2>
+    <articles
+      :init-articles="articles"
+      :total="total"
+    />
   </section>
 </template>
 
@@ -9,6 +14,9 @@
 import Articles from '~/components/Articles.vue'
 
 export default {
+  components: {
+    Articles
+  },
   asyncData ({ app, params, error }) {
     return app.$axios.get('/api/articles', {
       params: {
@@ -17,7 +25,7 @@ export default {
     }).then(({ data }) => ({
       articles: data.articles,
       total: data.total
-    })).catch(err =>
+    })).catch(() =>
       error({ statusCode: 404, message: 'Tag not found' })
     )
   },
@@ -25,9 +33,6 @@ export default {
     return {
       title: `Skr | 标签：${this.$route.params.name}`
     }
-  },
-  components: {
-    Articles
   }
 }
 </script>

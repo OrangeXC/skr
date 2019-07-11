@@ -1,16 +1,17 @@
 module.exports = {
-  root: true,
-  parser: 'babel-eslint',
-  env: {
-    browser: true,
-    node: true
-  },
-  extends: 'standard',
-  // required to lint *.vue files
-  plugins: [
-    'html'
+  extends: [
+    'standard',
+    'plugin:vue/recommended'
   ],
-  // add your custom rules here
-  rules: {},
-  globals: {}
+  env: {
+    jest: true
+  },
+  rules: {
+    'vue/component-name-in-template-casing': [
+      'error',
+      'kebab-case',
+      { ignores: [] }
+    ],
+    'vue/no-v-html': 'off'
+  }
 }

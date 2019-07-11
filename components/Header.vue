@@ -1,23 +1,70 @@
 <template>
   <header class="header">
-    <h1 class="title" @click="$router.push('/')">Skr</h1>
-    <img class="menu-btn" src="~assets/img/menu.png" alt="menu" v-if="!isMenuShow" @click="toggleMenu">
-    <img class="menu-btn" src="~assets/img/close.png" alt="close" v-else @click="toggleMenu">
-    <nav class="nav" :class="{ 'mobile-nav': isMenuShow }">
+    <h1
+      class="title"
+      @click="$router.push('/')"
+    >
+      Skr
+    </h1>
+    <img
+      v-if="!isMenuShow"
+      class="menu-btn"
+      src="~assets/img/menu.png"
+      alt="menu"
+      @click="toggleMenu"
+    >
+    <img
+      v-else
+      class="menu-btn"
+      src="~assets/img/close.png"
+      alt="close"
+      @click="toggleMenu"
+    >
+    <nav
+      class="nav"
+      :class="{ 'mobile-nav': isMenuShow }"
+    >
       <ul>
-        <li @click="toTag">标签</li>
-        <li v-for="link in links" :key="link.id" @click="open(link.href)">
+        <li @click="toTag">
+          标签
+        </li>
+        <li
+          v-for="link in links"
+          :key="link.id"
+          @click="open(link.href)"
+        >
           {{ link.name }}
         </li>
-        <li class="icons" v-if="isMenuShow">
-          <a href="https://github.com/OrangeXC" target="_blank">
-            <img class="icon" src="~assets/img/github.png" alt="github">
+        <li
+          v-if="isMenuShow"
+          class="icons"
+        >
+          <a
+            href="https://github.com/OrangeXC"
+            target="_blank"
+          >
+            <img
+              class="icon"
+              src="~assets/img/github.png"
+              alt="github"
+            >
           </a>
-          <a href="https://twitter.com/orangewxc" target="_blank">
-            <img class="icon" src="~assets/img/twitter.png" alt="twitter">
+          <a
+            href="https://twitter.com/orangewxc"
+            target="_blank"
+          >
+            <img
+              class="icon"
+              src="~assets/img/twitter.png"
+              alt="twitter"
+            >
           </a>
           <a href="mailto:842012622@qq.com">
-            <img class="icon" src="~assets/img/email.png" alt="email">
+            <img
+              class="icon"
+              src="~assets/img/email.png"
+              alt="email"
+            >
           </a>
         </li>
       </ul>
@@ -34,6 +81,9 @@ export default {
       isMenuShow: false
     }
   },
+  computed: mapState([
+    'links'
+  ]),
   methods: {
     toggleMenu () {
       this.isMenuShow = !this.isMenuShow
@@ -44,10 +94,7 @@ export default {
     open (url) {
       window.open(url)
     }
-  },
-  computed: mapState([
-    'links'
-  ])
+  }
 }
 </script>
 

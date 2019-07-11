@@ -1,6 +1,9 @@
 <template>
   <section class="wrap">
-    <articles :initArticles="articles" :total="total"></articles>
+    <articles
+      :init-articles="articles"
+      :total="total"
+    />
   </section>
 </template>
 
@@ -8,6 +11,9 @@
 import Articles from '~/components/Articles.vue'
 
 export default {
+  components: {
+    Articles
+  },
   async asyncData ({ app }) {
     const { data } = await app.$axios.get('/api/articles')
 
@@ -22,9 +28,6 @@ export default {
     return {
       title: 'Skr'
     }
-  },
-  components: {
-    Articles
   }
 }
 </script>

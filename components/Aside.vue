@@ -1,17 +1,43 @@
 <template>
   <aside class="aside">
-    <img class="avatar" src="~assets/img/avatar.jpg" alt="avatar">
-    <p class="name">Orange</p>
-    <p class="info">Go big or go home</p>
+    <img
+      class="avatar"
+      src="~assets/img/avatar.jpg"
+      alt="avatar"
+    >
+    <p class="name">
+      Orange
+    </p>
+    <p class="info">
+      Go big or go home
+    </p>
     <div class="icons">
-      <a href="https://github.com/OrangeXC" target="_blank">
-        <img class="icon" src="~assets/img/github.png" alt="github">
+      <a
+        href="https://github.com/OrangeXC"
+        target="_blank"
+      >
+        <img
+          class="icon"
+          src="~assets/img/github.png"
+          alt="github"
+        >
       </a>
-      <a href="https://twitter.com/orangewxc" target="_blank">
-        <img class="icon" src="~assets/img/twitter.png" alt="twitter">
+      <a
+        href="https://twitter.com/orangewxc"
+        target="_blank"
+      >
+        <img
+          class="icon"
+          src="~assets/img/twitter.png"
+          alt="twitter"
+        >
       </a>
       <a href="mailto:842012622@qq.com">
-        <img class="icon" src="~assets/img/email.png" alt="email">
+        <img
+          class="icon"
+          src="~assets/img/email.png"
+          alt="email"
+        >
       </a>
     </div>
   </aside>

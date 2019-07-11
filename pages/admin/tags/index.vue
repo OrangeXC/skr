@@ -1,8 +1,8 @@
 <template>
   <section>
     <el-table
-      :data="currentPageData"
       v-loading.body="listLoading"
+      :data="currentPageData"
       border
       fit
       highlight-current-row
@@ -11,26 +11,38 @@
       <el-table-column label="名称">
         <template slot-scope="scope">
           <template v-if="scope.row.edit">
-            <el-input v-model="scope.row.name" class="edit-input" size="small"/>
+            <el-input
+              v-model="scope.row.name"
+              class="edit-input"
+              size="small"
+            />
             <el-button
               class="cancel-btn"
               size="small"
               icon="el-icon-refresh"
               type="warning"
               @click="cancelEdit(scope.row)"
-            >cancel</el-button>
+            >
+              cancel
+            </el-button>
           </template>
           <span v-else>{{ scope.row.name }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column label="文章数" width="120">
+      <el-table-column
+        label="文章数"
+        width="120"
+      >
         <template slot-scope="scope">
           <span>{{ scope.row.articleCount }}</span>
         </template>
       </el-table-column>
 
-      <el-table-column label="操作" width="182">
+      <el-table-column
+        label="操作"
+        width="182"
+      >
         <template slot-scope="scope">
           <el-button
             v-if="scope.row.edit"
@@ -38,20 +50,26 @@
             size="small"
             icon="el-icon-circle-check-outline"
             @click="confirmEdit(scope.row)"
-          >保存</el-button>
+          >
+            保存
+          </el-button>
           <el-button
             v-else
             type="primary"
             size="small"
             icon="el-icon-edit"
             @click="scope.row.edit = !scope.row.edit"
-          >编辑</el-button>
+          >
+            编辑
+          </el-button>
           <el-button
             type="danger"
             size="small"
             icon="el-icon-delete"
             @click="remove(scope.row.name, scope.$index)"
-          >删除</el-button>
+          >
+            删除
+          </el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -61,13 +79,26 @@
       layout="prev, pager, next"
       :total="tags.length"
       :page-size="1"
-      @current-change="currentChange">
-    </el-pagination>
+      @current-change="currentChange"
+    />
   </section>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      currentPage: 1,
+      listLoading: null
+    }
+  },
+  computed: {
+    currentPageData: function () {
+      const page = this.currentPage
+
+      return this.tags.slice((page - 1) * 10, page * 10)
+    }
+  },
   asyncData ({ app }) {
     return app.$axios.get('/api/tags', {
       params: {
@@ -81,19 +112,6 @@ export default {
         return tag
       })
     }))
-  },
-  data () {
-    return {
-      currentPage: 1,
-      listLoading: null
-    }
-  },
-  computed: {
-    currentPageData: function () {
-      const page = this.currentPage
-
-      return this.tags.slice((page - 1) * 10, page * 10)
-    }
   },
   methods: {
     cancelEdit (row) {
