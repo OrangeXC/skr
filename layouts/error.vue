@@ -1,6 +1,10 @@
 <template>
   <section class="wrap">
-    <img src="../assets/img/logo.png" alt="Nuxt.js Logo" class="logo" />
+    <img
+      src="../assets/img/logo.png"
+      alt="Nuxt.js Logo"
+      class="logo"
+    >
     <h1 class="title">
       {{ error.statusCode }}
     </h1>
@@ -11,7 +15,12 @@
 </template>
 <script>
 export default {
-  props: ['error']
+  props: {
+    error: {
+      type: Object,
+      default: () => ({})
+    }
+  }
 }
 </script>
 

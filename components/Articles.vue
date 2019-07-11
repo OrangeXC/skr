@@ -1,13 +1,22 @@
 <template>
   <div>
     <ul>
-      <li class="article-item" v-for="article in articles" :key="article._id">
-        <h2 class="article-item__title" @click="toDetail(article._id)">{{ article.title }}</h2>
+      <li
+        v-for="article in articles"
+        :key="article._id"
+        class="article-item"
+      >
+        <h2
+          class="article-item__title"
+          @click="toDetail(article._id)"
+        >
+          {{ article.title }}
+        </h2>
         <div class="article-item__info">
           <p class="base">
-            <i class="el-icon-date"></i>
+            <i class="el-icon-date" />
             {{ article.date | format }}
-            <i class="el-icon-view"></i>
+            <i class="el-icon-view" />
             {{ article.views }}
           </p>
           <p class="tags">
@@ -17,7 +26,9 @@
               size="mini"
               type="info"
               @click.native="toTag(tag)"
-            >{{ tag }}</el-tag>
+            >
+              {{ tag }}
+            </el-tag>
           </p>
         </div>
       </li>
@@ -26,8 +37,8 @@
       background
       layout="prev, pager, next"
       :total="total"
-      @current-change="currentChange">
-    </el-pagination>
+      @current-change="currentChange"
+    />
   </div>
 </template>
 

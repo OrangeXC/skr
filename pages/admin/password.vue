@@ -1,10 +1,23 @@
 <template>
   <section>
-    <el-input v-model="password" placeholder="请输入新密码"></el-input>
-    <el-input v-model="repeatPassword" placeholder="请再次输入新密码"></el-input>
+    <el-input
+      v-model="password"
+      placeholder="请输入新密码"
+    />
+    <el-input
+      v-model="repeatPassword"
+      placeholder="请再次输入新密码"
+    />
     <p class="action-bar">
-      <el-button @click="reset">重置</el-button>
-      <el-button type="primary" @click="submit">提交</el-button>
+      <el-button @click="reset">
+        重置
+      </el-button>
+      <el-button
+        type="primary"
+        @click="submit"
+      >
+        提交
+      </el-button>
     </p>
   </section>
 </template>
@@ -37,7 +50,7 @@ export default {
       })
     },
     reset () {
-      this.password = '',
+      this.password = ''
       this.repeatPassword = ''
     }
   },

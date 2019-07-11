@@ -1,30 +1,46 @@
 <template>
   <div>
-    <el-input v-model="article.title" placeholder="标题"></el-input>
+    <el-input
+      v-model="article.title"
+      placeholder="标题"
+    />
     <el-select
       v-model="article.tags"
       multiple
       filterable
       allow-create
       default-first-option
-      placeholder="请选择文章标签">
+      placeholder="请选择文章标签"
+    >
       <el-option
         v-for="item in tags"
         :key="item"
         :label="item"
         :value="item"
-      ></el-option>
+      />
     </el-select>
     <mavon-editor v-model="article.content" />
     <p class="action-bar">
-      <el-button @click="submit('draft')">保存到草稿</el-button>
-      <el-button type="primary" @click="submit('published')">发布</el-button>
+      <el-button @click="submit('draft')">
+        保存到草稿
+      </el-button>
+      <el-button
+        type="primary"
+        @click="submit('published')"
+      >
+        发布
+      </el-button>
     </p>
   </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      loading: null
+    }
+  },
   async asyncData ({ app, params, error }) {
     const tags = await app.$axios.get('/api/tags')
       .then(res => res.data)
@@ -50,11 +66,6 @@ export default {
       }
     } catch (err) {
       error({ statusCode: 404, message: 'Article not found' })
-    }
-  },
-  data () {
-    return {
-      loading: null
     }
   },
   methods: {

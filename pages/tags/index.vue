@@ -1,13 +1,17 @@
 <template>
   <div>
-    <h2 class="title">标签</h2>
+    <h2 class="title">
+      标签
+    </h2>
     <div class="tags">
       <el-tag
         v-for="tag in tags"
         :key="tag.name"
         type="info"
         @click.native="toTag(tag.name)"
-      >{{ tag.name }} ({{ tag.articleCount }})</el-tag>
+      >
+        {{ tag.name }} ({{ tag.articleCount }})
+      </el-tag>
     </div>
   </div>
 </template>
