@@ -102,7 +102,7 @@ export default {
             this.showMessage(status)
           })
       } else {
-        this.$axios.post(`/api/articles/new`, this.article)
+        this.$axios.post('/api/articles/new', this.article)
           .then(() => {
             this.closeLoading()
             this.showMessage(status)
