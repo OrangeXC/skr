@@ -3,9 +3,9 @@ const { Article } = require('../server')
 
 const router = Router()
 
-router.get('/tags', (req, res) => {
-  Article.find({}, ['tags'], (err, data) => {
-    if (err) res.status(500).send(err)
+router.get('/tags', async (req, res) => {
+  try {
+    const data = await Article.find({}, ['tags'])
 
     const tagsArr = Array.prototype.concat.apply([],
       data.map(({ tags }) => tags)
@@ -26,44 +26,48 @@ router.get('/tags', (req, res) => {
     }
 
     res.send(tags)
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 router.put('/tags/:name', async (req, res) => {
   const tagName = req.params.name
   const newTagName = req.body.name
 
-  await Article.updateMany({}, {
-    $addToSet: {
-      tags: newTagName
-    }
-  }, (err) => {
-    if (err) res.status(500).send(err)
-  })
+  try {
+    await Article.updateMany({}, {
+      $addToSet: {
+        tags: newTagName
+      }
+    })
 
-  Article.updateMany({}, {
-    $pull: {
-      tags: tagName
-    }
-  }, (err) => {
-    if (err) res.status(500).send(err)
+    await Article.updateMany({}, {
+      $pull: {
+        tags: tagName
+      }
+    })
 
     res.status(200).end()
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
-router.delete('/tags/:name', (req, res) => {
+router.delete('/tags/:name', async (req, res) => {
   const tagName = req.params.name
 
-  Article.updateMany({}, {
-    $pull: {
-      tags: tagName
-    }
-  }, (err) => {
-    if (err) res.status(500).send(err)
+  try {
+    await Article.updateMany({}, {
+      $pull: {
+        tags: tagName
+      }
+    })
 
     res.status(200).end()
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 module.exports = router

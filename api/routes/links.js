@@ -3,25 +3,31 @@ const { Link } = require('../server')
 
 const router = Router()
 
-router.get('/links', (req, res) => {
-  Link.find({}, (err, data) => {
-    if (err) res.status(500).end()
+router.get('/links', async (req, res) => {
+  try {
+    const data = await Link.find({})
 
     res.send(data)
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
-router.post('/links', (req, res) => {
+router.post('/links', async (req, res) => {
   const links = req.body || []
 
-  Link.remove({})
+  try {
+    await Link.deleteMany({})
 
-  const promises = links
-    .map(({ name, href }) => new Link({ name, href }).save())
+    const promises = links
+      .map(({ name, href }) => new Link({ name, href }).save())
 
-  Promise.all(promises)
-    .then(() => res.status(200).end())
-    .catch(() => res.status(500).end())
+    await Promise.all(promises)
+
+    res.status(200).end()
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 module.exports = router

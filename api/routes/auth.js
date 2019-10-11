@@ -3,14 +3,13 @@ const { User } = require('../server')
 
 const router = Router()
 
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
   const { username, password } = req.body
 
-  User.findOne({ username }, 'password', (err, data) => {
+  try {
+    const data = await User.findOne({ username }, 'password')
+
     switch (true) {
-      case !!err:
-        res.status(401).json({ message: err })
-        break
       case !data:
         res.status(401).json({ message: '账号不存在' })
         break
@@ -24,13 +23,15 @@ router.post('/login', (req, res) => {
       default:
         res.status(401).json({ message: '未知错误' })
     }
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 router.post('/logout', (req, res) => {
   delete req.session.authUser
 
-  res.json({ ok: true })
+  res.status(200).end()
 })
 
 module.exports = router
