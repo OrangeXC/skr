@@ -51,7 +51,9 @@ const initialize = function () {
 }
 
 mongoose.connect('mongodb://127.0.0.1/skr', {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
 })
 
 const mongooseConnection = mongoose.connection

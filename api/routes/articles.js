@@ -16,34 +16,38 @@ router.get('/articles', async (req, res) => {
 
   if (req.query.tag) query.tags = req.query.tag
 
-  Article.paginate(query, options, (err, { docs, total }) => {
-    if (err) res.status(500).send(err)
+  try {
+    const { docs, total } = await Article.paginate(query, options)
 
     res.send({
       articles: docs,
       total
     })
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
-router.get('/admin/articles', (req, res) => {
+router.get('/admin/articles', async (req, res) => {
   const options = {
     select: 'title date status views',
     sort: { date: -1 },
     page: req.query.page
   }
 
-  Article.paginate({}, options, (err, { docs, total }) => {
-    if (err) res.status(500).send(err)
+  try {
+    const { docs, total } = await Article.paginate({}, options)
 
     res.send({
       articles: docs,
       total
     })
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
-router.get('/articles/:id', (req, res) => {
+router.get('/articles/:id', async (req, res) => {
   const id = req.params.id
   const update = {}
 
@@ -51,35 +55,49 @@ router.get('/articles/:id', (req, res) => {
     update.$inc = { views: 1 }
   }
 
-  Article.findByIdAndUpdate(id, update, (err, data) => {
-    if (err) res.status(500).send(err)
+  try {
+    const data = await Article.findByIdAndUpdate(id, update)
 
     res.send(data)
-  })
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
-router.post('/articles/new', (req, res) => {
+router.post('/articles/new', async (req, res) => {
   req.body.views = 0
 
-  new Article(req.body).save()
+  try {
+    await new Article(req.body).save()
 
-  res.status(200).end()
+    res.status(200).end()
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 router.put('/articles/:id', async (req, res) => {
   const id = req.params.id
 
-  await Article.findByIdAndUpdate(id, req.body, {
-    new: true
-  })
+  try {
+    await Article.findByIdAndUpdate(id, req.body, {
+      new: true
+    })
 
-  res.send(req.body)
+    res.send(req.body)
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
-router.delete('/articles/:id', (req, res) => {
-  Article.findByIdAndRemove(req.params.id)
+router.delete('/articles/:id', async (req, res) => {
+  try {
+    Article.findByIdAndRemove(req.params.id)
 
-  res.status(200).end()
+    res.status(200).end()
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 module.exports = router

@@ -3,12 +3,16 @@ const { User } = require('../server')
 
 const router = Router()
 
-router.put('/user', (req, res) => {
+router.put('/user', async (req, res) => {
   const { username, password } = req.body
 
-  User.findOneAndUpdate({ username }, { password })
+  try {
+    await User.findOneAndUpdate({ username }, { password })
 
-  res.status(200).end()
+    res.status(200).end()
+  } catch (err) {
+    res.status(500).send(err)
+  }
 })
 
 module.exports = router
