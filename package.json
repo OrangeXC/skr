@@ -24,7 +24,7 @@
     "mavon-editor": "^2.7.6",
     "mongoose": "^5.7.4",
     "mongoose-paginate": "^5.0.3",
-    "nuxt": "^2.10.0",
+    "nuxt": "^2.10.1",
     "sortablejs": "^1.10.1",
     "source-map-support": "^0.5.13",
     "whatwg-fetch": "^3.0.0"
