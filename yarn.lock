@@ -3158,10 +3158,10 @@ concat-stream@^1.5.0:
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
 
-connect-mongo@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/connect-mongo/-/connect-mongo-3.1.0.tgz#2a98efa834de7e9e63005e24fec5dcf8d38b3cca"
-  integrity sha512-BDn09MMBFse7Y0uVjUW8p7jjDKHWgg0veXFeETqBeJM7Eg+aWN8YBpod5FkSLiD28YknrYjT4dgHg9fq/h62ew==
+connect-mongo@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/connect-mongo/-/connect-mongo-3.1.1.tgz#c5f34a4bda30d5e9c855f45b58260ad887bd77e9"
+  integrity sha512-kXG1tBHXkzYJd1+oLUX5Q0Xp3wrBaFC24/3Bqvne6yLfVq3Urc/Qg9TdVge9MEEQ7Q8cirB5vDj85qsrAaPPyg==
   dependencies:
     mongodb "^3.1.0"
 
@@ -9275,7 +9275,15 @@ source-map-resolve@^0.5.0:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.13, source-map-support@~0.5.12:
+source-map-support@^0.5.16:
+  version "0.5.16"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.16.tgz#0ae069e7fe3ba7538c64c98515e35339eac5a042"
+  integrity sha512-efyLRJDr68D9hBBNIPWFjhpFzURh+KJykQwvMyW5UiZzYwoF6l4YMMDIJJEyFWxWCqfyxLzz6tSfUFR+kXXsVQ==
+  dependencies:
+    buffer-from "^1.0.0"
+    source-map "^0.6.0"
+
+source-map-support@~0.5.12:
   version "0.5.13"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.13.tgz#31b24a9c2e73c2de85066c0feb7d44767ed52932"
   integrity sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==
