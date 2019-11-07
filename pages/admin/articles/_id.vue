@@ -36,11 +36,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      loading: null
-    }
-  },
   async asyncData ({ app, params, error }) {
     const tags = await app.$axios.get('/api/tags')
       .then(res => res.data)
@@ -66,6 +61,11 @@ export default {
       }
     } catch (err) {
       error({ statusCode: 404, message: 'Article not found' })
+    }
+  },
+  data () {
+    return {
+      loading: null
     }
   },
   methods: {

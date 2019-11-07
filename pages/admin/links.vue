@@ -75,17 +75,17 @@
 import Sortable from 'sortablejs'
 
 export default {
-  data () {
-    return {
-      listLoading: false,
-      sortable: null
-    }
-  },
   async asyncData ({ app }) {
     const { data } = await app.$axios.get('/api/links')
 
     return {
       links: data
+    }
+  },
+  data () {
+    return {
+      listLoading: false,
+      sortable: null
     }
   },
   mounted () {

@@ -86,19 +86,6 @@
 
 <script>
 export default {
-  data () {
-    return {
-      currentPage: 1,
-      listLoading: null
-    }
-  },
-  computed: {
-    currentPageData: function () {
-      const page = this.currentPage
-
-      return this.tags.slice((page - 1) * 10, page * 10)
-    }
-  },
   asyncData ({ app }) {
     return app.$axios.get('/api/tags', {
       params: {
@@ -112,6 +99,19 @@ export default {
         return tag
       })
     }))
+  },
+  data () {
+    return {
+      currentPage: 1,
+      listLoading: null
+    }
+  },
+  computed: {
+    currentPageData: function () {
+      const page = this.currentPage
+
+      return this.tags.slice((page - 1) * 10, page * 10)
+    }
   },
   methods: {
     cancelEdit (row) {
