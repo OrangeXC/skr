@@ -102,11 +102,6 @@ export default {
       return statusMap[status]
     }
   },
-  data () {
-    return {
-      listLoading: false
-    }
-  },
   async asyncData ({ app }) {
     const { data } = await app.$axios.get('/api/admin/articles')
 
@@ -115,6 +110,11 @@ export default {
     return {
       articles,
       total
+    }
+  },
+  data () {
+    return {
+      listLoading: false
     }
   },
   methods: {

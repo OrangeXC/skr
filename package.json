@@ -14,7 +14,7 @@
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
     "@nuxtjs/axios": "^5.8.0",
-    "@nuxtjs/pwa": "^3.0.0-beta.12",
+    "@nuxtjs/pwa": "^3.0.0-beta.19",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.1.2",
     "cross-env": "^6.0.3",
@@ -39,7 +39,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-vue": "^6.0.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0"
   },

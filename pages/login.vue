@@ -40,21 +40,16 @@
 import { mapActions } from 'vuex'
 
 export default {
-  data () {
-    return {
-      username: '',
-      password: '',
-      loading: false
-    }
-  },
   fetch ({ store, redirect }) {
     if (store.state.authUser) {
       redirect('/admin')
     }
   },
-  head () {
+  data () {
     return {
-      title: 'Skr | 登录'
+      username: '',
+      password: '',
+      loading: false
     }
   },
   layout: 'empty',
@@ -83,6 +78,11 @@ export default {
         this.loading = false
         this.$message.error('登录失败，请检查用户名密码！')
       })
+    }
+  },
+  head () {
+    return {
+      title: 'Skr | 登录'
     }
   }
 }
