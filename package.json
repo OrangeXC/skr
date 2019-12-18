@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
-    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/axios": "^5.9.0",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
@@ -24,7 +24,7 @@
     "mavon-editor": "^2.7.7",
     "mongoose": "^5.8.1",
     "mongoose-paginate": "^5.0.3",
-    "nuxt": "^2.10.2",
+    "nuxt": "^2.11.0",
     "sortablejs": "^1.10.1",
     "source-map-support": "^0.5.16",
     "whatwg-fetch": "^3.0.0"
