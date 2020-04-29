@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
-    "@nuxtjs/axios": "^5.9.7",
+    "@nuxtjs/axios": "^5.10.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
@@ -21,12 +21,12 @@
     "element-ui": "^2.13.1",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "mavon-editor": "^2.8.3",
-    "mongoose": "^5.9.9",
+    "mavon-editor": "^2.9.0",
+    "mongoose": "^5.9.10",
     "mongoose-paginate": "^5.0.3",
     "nuxt": "^2.12.2",
     "sortablejs": "^1.10.2",
-    "source-map-support": "^0.5.16",
+    "source-map-support": "^0.5.19",
     "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
@@ -40,7 +40,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.0",
     "sass-loader": "^8.0.2"
   },
   "license": "MIT"
