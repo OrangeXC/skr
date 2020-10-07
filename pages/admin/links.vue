@@ -32,9 +32,7 @@
         label="拖拽"
         width="60"
       >
-        <template>
-          <i class="el-icon-rank" />
-        </template>
+        <i class="el-icon-rank" />
       </el-table-column>
 
       <el-table-column
@@ -75,6 +73,8 @@
 import Sortable from 'sortablejs'
 
 export default {
+  layout: 'admin',
+  middleware: 'auth',
   async asyncData ({ app }) {
     const { data } = await app.$axios.get('/api/links')
 
@@ -86,6 +86,11 @@ export default {
     return {
       listLoading: false,
       sortable: null
+    }
+  },
+  head () {
+    return {
+      title: 'Skr | 链接管理'
     }
   },
   mounted () {
@@ -127,14 +132,7 @@ export default {
         this.$message.success('链接保存成功！')
       })
     }
-  },
-  head () {
-    return {
-      title: 'Skr | 链接管理'
-    }
-  },
-  layout: 'admin',
-  middleware: 'auth'
+  }
 }
 </script>
 

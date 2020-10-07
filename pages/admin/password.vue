@@ -26,10 +26,17 @@
 import { mapActions } from 'vuex'
 
 export default {
+  layout: 'admin',
+  middleware: 'auth',
   data () {
     return {
       password: '',
       repeatPassword: ''
+    }
+  },
+  head () {
+    return {
+      title: 'Skr | 修改密码'
     }
   },
   methods: {
@@ -53,14 +60,7 @@ export default {
       this.password = ''
       this.repeatPassword = ''
     }
-  },
-  head () {
-    return {
-      title: 'Skr | 修改密码'
-    }
-  },
-  layout: 'admin',
-  middleware: 'auth'
+  }
 }
 </script>
 

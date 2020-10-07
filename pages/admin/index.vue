@@ -102,6 +102,8 @@ export default {
       return statusMap[status]
     }
   },
+  layout: 'admin',
+  middleware: 'auth',
   async asyncData ({ app }) {
     const { data } = await app.$axios.get('/api/admin/articles')
 
@@ -115,6 +117,11 @@ export default {
   data () {
     return {
       listLoading: false
+    }
+  },
+  head () {
+    return {
+      title: 'Skr | 控制台'
     }
   },
   methods: {
@@ -159,14 +166,7 @@ export default {
         this.articles = data.articles
       })
     }
-  },
-  head () {
-    return {
-      title: 'Skr | 控制台'
-    }
-  },
-  layout: 'admin',
-  middleware: 'auth'
+  }
 }
 </script>
 
