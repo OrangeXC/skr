@@ -86,6 +86,8 @@
 
 <script>
 export default {
+  layout: 'admin',
+  middleware: 'auth',
   asyncData ({ app }) {
     return app.$axios.get('/api/tags', {
       params: {
@@ -104,6 +106,11 @@ export default {
     return {
       currentPage: 1,
       listLoading: null
+    }
+  },
+  head () {
+    return {
+      title: 'Skr | 标签管理'
     }
   },
   computed: {
@@ -170,14 +177,7 @@ export default {
     currentChange (page) {
       this.currentPage = page
     }
-  },
-  head () {
-    return {
-      title: 'Skr | 标签管理'
-    }
-  },
-  layout: 'admin',
-  middleware: 'auth'
+  }
 }
 </script>
 

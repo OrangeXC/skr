@@ -27,14 +27,14 @@ export default {
       tags: res.data
     }))
   },
-  methods: {
-    toTag (tag) {
-      this.$router.push(`/tags/${tag}`)
-    }
-  },
   head () {
     return {
       title: 'Skr | 标签'
+    }
+  },
+  methods: {
+    toTag (tag) {
+      this.$router.push(`/tags/${tag}`)
     }
   }
 }

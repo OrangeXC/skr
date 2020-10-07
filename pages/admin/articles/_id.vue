@@ -36,6 +36,8 @@
 
 <script>
 export default {
+  layout: 'admin',
+  middleware: 'auth',
   async asyncData ({ app, params, error }) {
     const tags = await app.$axios.get('/api/tags')
       .then(res => res.data)
@@ -66,6 +68,11 @@ export default {
   data () {
     return {
       loading: null
+    }
+  },
+  head () {
+    return {
+      title: `Skr | 编辑：${this.article.title}`
     }
   },
   methods: {
@@ -109,14 +116,7 @@ export default {
           })
       }
     }
-  },
-  head () {
-    return {
-      title: `Skr | 编辑：${this.article.title}`
-    }
-  },
-  layout: 'admin',
-  middleware: 'auth'
+  }
 }
 </script>
 
