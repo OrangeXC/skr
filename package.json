@@ -22,7 +22,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mavon-editor": "^2.9.0",
-    "mongoose": "^5.10.8",
+    "mongoose": "^5.10.9",
     "mongoose-paginate": "^5.0.3",
     "nuxt": "^2.14.6",
     "sortablejs": "^1.12.0",
@@ -32,7 +32,7 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
-    "eslint": "^7.10.0",
+    "eslint": "^7.11.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.1",
@@ -41,7 +41,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^7.0.1",
     "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2"
+    "sass-loader": "^10.0.3"
   },
   "license": "MIT"
 }
