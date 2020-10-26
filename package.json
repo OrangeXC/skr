@@ -14,7 +14,7 @@
   "dependencies": {
     "@digibytes/markdownit": "^1.2.2",
     "@nuxtjs/axios": "^5.12.2",
-    "@nuxtjs/pwa": "^3.2.1",
+    "@nuxtjs/pwa": "^3.2.2",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
     "cross-env": "^7.0.2",
@@ -22,9 +22,9 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mavon-editor": "^2.9.0",
-    "mongoose": "^5.10.9",
+    "mongoose": "^5.10.10",
     "mongoose-paginate": "^5.0.3",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.14.7",
     "sortablejs": "^1.12.0",
     "source-map-support": "^0.5.19",
     "whatwg-fetch": "^3.4.1"
@@ -32,16 +32,16 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "babel-plugin-component": "^1.1.1",
-    "eslint": "^7.11.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint": "^7.12.0",
+    "eslint-config-standard": "^15.0.0",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^7.0.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "eslint-plugin-vue": "^7.1.0",
     "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.3"
+    "sass-loader": "^10.0.4"
   },
   "license": "MIT"
 }
