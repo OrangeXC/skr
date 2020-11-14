@@ -10,17 +10,19 @@ function isAllowUrl ({ url, method }) {
   let flag = false
 
   whiteList.some(item => {
-    if (url === '/login') {
+    if (
+      url === '/login' ||
+      (
+        method === 'GET' &&
+        url.indexOf(item) === 0
+      )
+    ) {
       flag = true
 
       return true
     }
 
-    if (method === 'GET' && url.indexOf(item) === 0) {
-      flag = true
-
-      return true
-    }
+    return false
   })
 
   return flag
