@@ -22,9 +22,9 @@
     "express": "4.17.1",
     "express-session": "1.17.1",
     "mavon-editor": "2.9.0",
-    "mongoose": "5.11.4",
+    "mongoose": "5.11.7",
     "mongoose-paginate": "5.0.3",
-    "nuxt": "2.14.9",
+    "nuxt": "2.14.11",
     "sortablejs": "1.12.0",
     "source-map-support": "0.5.19",
     "whatwg-fetch": "3.5.0"
