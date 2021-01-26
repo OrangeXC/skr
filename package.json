@@ -18,11 +18,11 @@
     "body-parser": "1.19.0",
     "connect-mongo": "3.2.0",
     "cross-env": "7.0.3",
-    "element-ui": "2.14.1",
+    "element-ui": "2.15.0",
     "express": "4.17.1",
     "express-session": "1.17.1",
     "mavon-editor": "2.9.1",
-    "mongoose": "5.11.11",
+    "mongoose": "5.11.13",
     "mongoose-paginate": "5.0.3",
     "nuxt": "2.14.12",
     "sortablejs": "1.13.0",
@@ -32,16 +32,16 @@
   "devDependencies": {
     "babel-eslint": "10.1.0",
     "babel-plugin-component": "1.1.1",
-    "eslint": "7.17.0",
+    "eslint": "7.18.0",
     "eslint-config-standard": "16.0.2",
     "eslint-plugin-html": "6.1.1",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-standard": "4.1.0",
-    "eslint-plugin-vue": "7.4.1",
+    "eslint-plugin-vue": "7.5.0",
     "node-sass": "5.0.0",
-    "sass-loader": "10.1.0"
+    "sass-loader": "10.1.1"
   },
   "license": "MIT"
 }
