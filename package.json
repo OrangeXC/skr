@@ -19,7 +19,7 @@
     "connect-mongo": "4.6.0",
     "cross-env": "7.0.3",
     "element-ui": "2.15.6",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "express-session": "1.17.2",
     "mavon-editor": "2.9.1",
     "mongoose": "6.0.6",
